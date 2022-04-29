@@ -1,5 +1,27 @@
-<ul>
-    <li (click)="changeLanguage('en')"> EN </li>
-    <li (click)="changeLanguage('hi')"> HI </li>
-    <li (click)="changeLanguage('gu')"> GU </li>
-</ul>
+<div class="header-box">
+    <div class="col-xl-4">
+        <div class="logo">
+            <img src="./../../assets/images/logo.png" alt="SitaRam">
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <ul class="navigation-menu">
+            <li> Gallary </li>
+            <li> About  </li>
+            <li> Contact </li>
+            <li> Login </li>
+        </ul>
+    </div>
+    <div class="col-xl-2">
+        <div class="language-container">
+            <select name="language" id="language" class="language-dropdown" 
+                [(ngModel)]="selectedLanguage"
+                (change)="changeLanguage($event)"
+            >
+                <option *ngFor="let language of appLanguages" [value]="language.code"> 
+                    {{ language.title }} 
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
