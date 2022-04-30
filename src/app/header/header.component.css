@@ -12,7 +12,6 @@
 
 .navigation-menu {
     padding: 0;
-    margin: 0;
     height: 100%;
     display: flex;
     align-items: center;
@@ -21,6 +20,15 @@
 
 .navigation-menu > li {
     display: inline-block;
+    padding: 5px 10px;
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 17px;
+    color: #696969;
+    cursor: pointer;
+}
+
+.navigation-menu > li:hover {
+    color: #E97000;
 }
 
 .language-container {
@@ -28,4 +36,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.language-container .language-dropdown {
+    max-width: 100%;
+    padding: 5px 10px;
+    font-family: 'Roboto Medium', sans-serif;
+    color: #696969;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #696969;
+    border-radius: 5px;
 }
