@@ -1,29 +1,65 @@
 <div class="header-box">
-    <div class="col-xl-4">
+    <div class="col-7 col-md-4">
         <div class="logo">
-            <img src="./../../assets/images/logo.png" alt="SitaRam">
+            <img src="assets/images/logo.png" alt="SitaRam">
         </div>
     </div>
-    <div class="col-xl-6">
+    <div class="col-md-6 d-none d-md-block">
         <ul class="navigation-menu">
             <li> Home </li>
             <li> Gallary </li>
             <li> About  </li>
             <li> Contact </li>
-            <li> More </li>
+            <li class="dropdown">
+                <button class="dropdown-toggle more" type="button" id="dropdownMenuMoreButton" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuMoreButton">
+                    <li> <a class="dropdown-item" href="#"> Action </a> </li>
+                    <li> <a class="dropdown-item" href="#"> Another action </a> </li>
+                    <li> <a class="dropdown-item" href="#"> Something else here </a> </li>
+                </ul>
+            </li>
             <li> Login </li>
+            <li class="dropdown">
+                <button class="dropdown-toggle profile" type="button" id="dropdownMenuLogOutButton" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                    Profile
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLogOutButton">
+                    <li> <a class="dropdown-item" href="#"> Action1 </a> </li>
+                    <li> <a class="dropdown-item" href="#"> Another action2 </a> </li>
+                    <li> <a class="dropdown-item" href="#"> Something else here3 </a> </li>
+                </ul>
+            </li>
         </ul>
     </div>
-    <div class="col-xl-2">
-        <div class="language-container">
-            <select name="language" id="language" class="language-dropdown" 
-                [(ngModel)]="selectedLanguage"
-                (change)="changeLanguage($event)"
-            >
-                <option *ngFor="let language of appLanguages" [value]="language.code"> 
-                    {{ language.title }} 
-                </option>
-            </select>
+    <div class="col-5 col-md-2">
+        <div class="right-side-menu">
+            <div class="dropdown">
+                <button class="dropdown-toggle menu-bar-container d-md-none" type="button" 
+                id="dropdownMobileMenuButton" title="Menu" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMobileMenuButton">
+                    <li> <a class="dropdown-item" href="#"> Action11 </a> </li>
+                    <li> <a class="dropdown-item" href="#"> Another action22 </a> </li>
+                    <li> <a class="dropdown-item" href="#"> Something else here33 </a> </li>
+                </ul>
+            </div>
+            <div class="language-container">
+                <select name="language" id="language" class="language-dropdown"
+                    [title]="'language' | translate"
+                    [(ngModel)]="selectedLanguage"
+                    (change)="changeLanguage($event)"
+                >
+                    <option *ngFor="let language of appLanguages" [value]="language.code"> 
+                        {{ language.title }} 
+                    </option>
+                </select>
+            </div>
         </div>
     </div>
 </div>
