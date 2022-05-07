@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  imgSliderCount = 10;
+  imgSliderIterator = [ ...Array(this.imgSliderCount).keys() ].map(num => num + 1);
+
   constructor() { }
 
   ngOnInit(): void {

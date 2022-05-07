@@ -1,0 +1,105 @@
+.welcome-container {
+    padding: 60px 200px; 
+    text-align: center;
+    background-image: linear-gradient(#424242, #424242), url(./../../assets/images/welcome-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: saturation;
+}
+
+.welcome-to-ramwadi img {
+    margin: 10px auto;
+}
+
+.welcome-title {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.welcome-description {
+    padding: 10px 40px;
+    font-family: 'Robot Regular', sans-serif;
+    font-size: 15px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .welcome-container {
+        padding: 50px 180px;
+    }
+
+    .welcome-to-ramwadi img {
+        margin: 8px auto;
+    }
+
+    .welcome-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .welcome-description {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .welcome-container {
+        padding: 40px 150px;
+    }
+
+    .welcome-to-ramwadi img {
+        margin: 8px auto;
+    }
+
+    .welcome-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .welcome-description {
+        padding: 0;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .welcome-container {
+        padding: 30px 100px;
+    }
+
+    .welcome-to-ramwadi img {
+        margin: 8px auto;
+    }
+
+    .welcome-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .welcome-description {
+        padding: 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .welcome-container {
+        padding: 20px 15px;
+    }
+
+    .welcome-to-ramwadi img {
+        margin: 6px auto;
+    }
+
+    .welcome-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .welcome-description {
+        padding: 0;
+        font-size: 12px;
+    }
+}

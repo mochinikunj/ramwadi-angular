@@ -2,7 +2,7 @@
     <div class="img-slider-container">
         <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <ng-container *ngFor="let item of [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]; let i=index;">
+                <ng-container *ngFor="let item of imgSliderIterator; let i=index;">
                     <button type="button" 
                         data-bs-target="#carouselExampleIndicators" 
                         [attr.data-bs-slide-to]="i" 
@@ -12,29 +12,13 @@
                     >
                     </button>
                 </ng-container>
-                <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
             </div>
             <div class="carousel-inner">
-                <ng-container *ngFor="let item of [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]">
+                <ng-container *ngFor="let item of imgSliderIterator">
                     <div class="carousel-item" [class.active]="item === 1">
                         <img [src]="'assets/images/home/img-slider' + item + '.jpg'" class="d-block w-100" alt="...">
                     </div>
                 </ng-container>
-                <!-- <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/468x60" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/468x60" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/468x60" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/468x60" class="d-block w-100" alt="...">
-                </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -44,6 +28,36 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+        </div>
+    </div>
+
+    <div class="welcome-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="welcome-to-ramwadi">
+                        <div class="welcome-header">
+                            <img src="assets/images/welcome-logo.png" class="d-block" alt="Welcome to Ramwadi">
+                            <span class="welcome-title">
+                                Welcome to 
+                                <br>
+                                Shree Godadiyabapa Ramwadi Aashram
+                            </span>
+                            <img src="assets/images/welcome-logo-border.png" class="d-block" alt="Logo border">
+                        </div>
+                        <div class="welcome-description">
+                            This Hanumanji temple is considered most holy and sacred. It is among the 
+                            more prominent ones in the Swaminarayan Sampraday. The image of Hanuman was 
+                            installed by Sadguru  Gopalanand Swami on Ashwini vadi pancham - savant 1905 
+                            (as per Hindu calandar). The image of this temple is said to be so powerful 
+                            that a mere look at it by people affected by evil spirits,drives the evil 
+                            spirits out of the people affected. Sarangpur is easily reached by bus or car, 
+                            as it is only 82 km from Bhavnagar. There can be a long wait at the temple 
+                            gate sometimes, mainly on Saturdays. 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
