@@ -24,6 +24,93 @@
     font-size: 15px;
 }
 
+.know-more {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+}
+
+.know-more:hover {
+    color: #E97000;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quick-links-card {
+    height: 100%;
+    padding: 20px;
+}
+
+.quick-links-card.donation {
+    background-color: #ddd;
+}
+
+.quick-links-card.annakshetra {
+    background-color: #ccc;
+}
+
+.quick-links-card.sundarkand {
+    background-color: #ddd;
+}
+
+.quick-links-card .card-image {
+    padding: 10px 0;
+    height: 145px;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.quick-links-card .card-text {
+    height: 90px;
+}
+
+.quick-links .card-title {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 26px;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+}
+
+.annakshetra .card-title {
+    margin-bottom: 0;
+}
+
+.annakshetra .card-subtitle {
+    margin-bottom: 0.4px;
+}
+
+.quick-links .card-subtitle {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 20px;
+    color: #424242;
+}
+
+.card-action button {
+    padding: 5px 10px;
+    font-family: 'Roboto Medium', sans-serif;
+    color: #424242;
+    background-color: transparent;
+    border: 1px solid #424242;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-action button:hover {
+    color: white;
+    background-color: #E97000;
+    border: 1px solid transparent;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .welcome-container {
         padding: 40px 180px;
@@ -41,6 +128,33 @@
     .welcome-description {
         padding: 10px 10px;
         font-size: 14px;
+    }
+
+    .know-more {
+        font-size: 13px;
+    }
+
+    .quick-links-card {
+        padding: 18px;
+    }
+    
+    .quick-links-card .card-image {
+        padding: 8px 0;
+        height: 140px;
+    }
+    
+    .quick-links-card .card-text {
+        height: 90px;
+    }
+    
+    .quick-links .card-title {
+        font-size: 24px;
+        letter-spacing: -0.4px;
+        margin-bottom: 4px;
+    }
+    
+    .quick-links .card-subtitle {
+        font-size: 18px;
     }
 }
 
@@ -60,6 +174,39 @@
 
     .welcome-description {
         padding: 0;
+        font-size: 14px;
+    }
+
+    .know-more {
+        margin: 10px 0;
+        font-size: 13px;
+    }
+
+    .quick-links-card {
+        padding: 15px;
+    }
+    
+    .quick-links-card .card-image {
+        padding: 6px 0;
+        height: 130px;
+    }
+    
+    .quick-links-card .card-text {
+        height: 80px;
+    }
+    
+    .quick-links .card-title {
+        font-size: 22px;
+        letter-spacing: -0.4px;
+        margin-bottom: 3px;
+    }
+    
+    .quick-links .card-subtitle {
+        font-size: 15px;
+    }
+    
+    .card-action button {
+        padding: 4px 8px;
         font-size: 14px;
     }
 }
@@ -82,6 +229,41 @@
         padding: 0;
         font-size: 14px;
     }
+
+    .know-more {
+        margin: 10px 0;
+        font-size: 13px;
+    }
+
+    .quick-links-card {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .quick-links-card .card-image {
+        padding: 4px 0;
+        height: 120px;
+    }
+    
+    .quick-links-card .card-text {
+        height: auto;
+        padding: 8px 0;
+    }
+    
+    .quick-links .card-title {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        margin-bottom: 4px;
+    }
+    
+    .quick-links .card-subtitle {
+        font-size: 14px;
+    }
+    
+    .card-action button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -101,5 +283,40 @@
     .welcome-description {
         padding: 0;
         font-size: 12px;
+    }
+
+    .know-more {
+        margin: 8px 0;
+        font-size: 12px;
+    }
+
+    .quick-links-card {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .quick-links-card .card-image {
+        padding: 4px 0;
+        height: 100px;
+    }
+    
+    .quick-links-card .card-text {
+        height: auto;
+        padding: 8px 0;
+    }
+    
+    .quick-links .card-title {
+        font-size: 18px;
+        letter-spacing: -0.4px;
+        margin-bottom: 4px;
+    }
+    
+    .quick-links .card-subtitle {
+        font-size: 11px;
+    }
+    
+    .card-action button {
+        padding: 5px 4px;
+        font-size: 11px;
     }
 }
