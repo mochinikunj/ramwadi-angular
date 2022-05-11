@@ -40,6 +40,10 @@
 .about-sundarkand {
     display: flex;
     flex-wrap: wrap;
+    background-image: url(./../../assets/images/about-sundarkand-bg-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .sundarkand-img,
