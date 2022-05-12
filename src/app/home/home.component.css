@@ -77,15 +77,15 @@
 }
 
 .quick-links-card.donation {
-    background-color: #ddd;
-}
-
-.quick-links-card.annakshetra {
     background-color: #ccc;
 }
 
-.quick-links-card.sundarkand {
+.quick-links-card.annakshetra {
     background-color: #ddd;
+}
+
+.quick-links-card.sundarkand {
+    background-color: #ccc;
 }
 
 .quick-links-card .card-image {
