@@ -23,14 +23,19 @@
 .navigation-menu > li,
 .navigation-menu .dropdown-toggle {
     display: inline-block;
+    cursor: pointer;
+}
+
+.navigation-menu li > a,
+.navigation-menu li button {
     padding: 5px 10px;
     font-family: 'Roboto Medium', sans-serif;
     letter-spacing: 0.22px;
     color: #424242;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-.navigation-menu > li:hover,
+.navigation-menu > li > a:hover,
 .navigation-menu .dropdown-toggle:hover {
     color: #E97000;
 }

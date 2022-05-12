@@ -1,15 +1,17 @@
 <div class="header-box">
-    <div class="col-7 col-md-4">
+    <div class="col-7 col-md-3">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="SitaRam">
+            <a class="d-inline-block h-100 mw-100" routerLink="/">
+                <img src="assets/images/logo.png" alt="SitaRam">
+            </a>
         </div>
     </div>
-    <div class="col-md-6 d-none d-md-block">
+    <div class="col-md-7 d-none d-md-block">
         <ul class="navigation-menu">
-            <li> Home </li>
-            <li> Gallary </li>
-            <li> About  </li>
-            <li> Contact </li>
+            <li><a routerLink="/"> Home </a></li>
+            <li><a routerLink="/gallary"> Gallary </a></li>
+            <li><a routerLink="/about"> About </a></li>
+            <li><a routerLink="/contact"> Contact </a></li>
             <li class="dropdown">
                 <button class="dropdown-toggle more" type="button" id="dropdownMenuMoreButton" 
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,7 +23,7 @@
                     <li><a class="dropdown-item" href="#"> Something else here </a></li>
                 </ul>
             </li>
-            <li> Login </li>
+            <li><a routerLink="/login"> Login </a></li>
             <li class="dropdown">
                 <button class="dropdown-toggle profile" type="button" id="dropdownMenuLogOutButton" 
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,15 +45,15 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMobileMenuButton">
-                    <li><a class="dropdown-item" href="#"> Home </a></li>
-                    <li><a class="dropdown-item" href="#"> Gallary </a></li>
-                    <li><a class="dropdown-item" href="#"> About </a></li>
-                    <li><a class="dropdown-item" href="#"> Contact </a></li>
-                    <li><a class="dropdown-item" href="#"> More </a></li>
-                    <li><a class="dropdown-item" href="#"> Login </a></li>
+                    <li><a class="dropdown-item" routerLink="/"> Home </a></li>
+                    <li><a class="dropdown-item" routerLink="/gallary"> Gallary </a></li>
+                    <li><a class="dropdown-item" routerLink="/about"> About </a></li>
+                    <li><a class="dropdown-item" routerLink="/contact"> Contact </a></li>
+                    <li><a class="dropdown-item" routerLink="/"> More </a></li>
+                    <li><a class="dropdown-item" routerLink="/login"> Login </a></li>
                     <ng-container>
-                        <li><a class="dropdown-item" href="#"> Profile </a></li>
-                        <li><a class="dropdown-item" href="#"> Logout </a></li>
+                        <li><a class="dropdown-item" routerLink="/"> Profile </a></li>
+                        <li><a class="dropdown-item" routerLink="/"> Logout </a></li>
                     </ng-container>
                 </ul>
             </div>
