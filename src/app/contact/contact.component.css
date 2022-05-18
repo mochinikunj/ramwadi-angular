@@ -1,0 +1,36 @@
+.contact-page {
+    background-image: linear-gradient(#424242, #424242), url(./../../assets/images/welcome-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: saturation;
+}
+
+.contact-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0;
+    background: inherit;
+    backdrop-filter: blur(4px);
+}
+
+.center-img {
+    margin: 10px auto;
+}
+
+.form-title {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.form-description {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+}
