@@ -26,11 +26,178 @@
 }
 
 .form-description {
-    font-family: 'Roboto Regular', sans-serif;
-    font-size: 15px;
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 20px;
+    color: #E97000;
 }
 
 .contact-form input,
 .contact-form textarea {
+    font-family: 'Karla Medium', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    font-family: 'Karla Regular', sans-serif;
+    font-size: 15px;
+}
+
+#contact-form-submit {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+#contact-form-submit {
     width: 100%;
+    margin-bottom: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+.contact-form input {
+    padding: 4px 0;
+    border-bottom: 1px solid #424242;
+}
+
+.contact-form textarea,
+#contact-form-submit {
+    padding: 4px;
+    border: 1px solid #424242;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#contact-form-submit:hover {
+    color: white;
+    background-color: #E97000;
+    border: 1px solid transparent;
+}
+
+.temple-contact {
+    font-family: 'Karla Medium', sans-serif;
+    font-size: 16px;
+}
+
+.google-location {
+    height: 350px;
+    width: 100%
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .center-img {
+        margin: 8px auto;
+    }
+
+    .form-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .form-description {
+        font-size: 20px;
+    }
+
+    .temple-contact {
+        font-size: 16px;
+    }
+
+    .contact-form input,
+    .contact-form input::placeholder,
+    .contact-form textarea,
+    .contact-form textarea::placeholder,
+    #contact-form-submit {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .center-img {
+        margin: 8px auto;
+    }
+
+    .form-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .form-description {
+        font-size: 18px;
+    }
+
+    .temple-contact {
+        font-size: 15px;
+    }
+
+    .contact-form input,
+    .contact-form input::placeholder,
+    .contact-form textarea,
+    .contact-form textarea::placeholder,
+    #contact-form-submit {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .center-img {
+        margin: 8px auto;
+    }
+
+    .form-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .form-description {
+        font-size: 16px;
+    }
+
+    .temple-contact {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form input::placeholder,
+    .contact-form textarea,
+    .contact-form textarea::placeholder,
+    #contact-form-submit {
+        font-size: 14px;
+    }
+
+    .google-location {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .center-img {
+        margin: 6px auto;
+    }
+
+    .form-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .form-description {
+        font-size: 15px;
+    }
+
+    .temple-contact {
+        font-size: 12px;
+    }
+
+    .contact-form input,
+    .contact-form input::placeholder,
+    .contact-form textarea,
+    .contact-form textarea::placeholder,
+    #contact-form-submit {
+        font-size: 12px;
+    }
+
+    .google-location {
+        height: 250px;
+    }
 }
