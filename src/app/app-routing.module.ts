@@ -5,6 +5,8 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { EventsComponent } from './events/events.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,10 @@ const routes: Routes = [
   {
     path: 'gallary',
     component: GallaryComponent
+  },
+  {
+    path: 'events',
+    component: EventsComponent
   },
   {
     path: 'about',
@@ -26,11 +32,29 @@ const routes: Routes = [
   {
     path: 'login',
     component: LogInComponent
+  },
+  { 
+    path: 'donation', 
+    loadChildren: () => import('./donation/donation.module').then(m => m.DonationModule) 
+  },
+  {
+    path: '404',
+    component: PageNotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [
+    RouterModule.forRoot(routes, { 
+      useHash: true, 
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled'
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -47,3 +47,6 @@ ul {
 }
 
 /********** global styles *************/
+.active-route {
+    color: #E97000 !important;
+}

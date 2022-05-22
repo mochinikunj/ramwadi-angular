@@ -8,11 +8,32 @@
     </div>
     <div class="col-md-7 d-none d-md-block">
         <ul class="navigation-menu">
-            <li><a routerLink="/"> Home </a></li>
-            <li><a routerLink="/gallary"> Gallary </a></li>
-            <li><a routerLink="/about"> About </a></li>
-            <li><a routerLink="/contact"> Contact </a></li>
-            <li class="dropdown">
+            <li>
+                <a routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
+                    Home 
+                </a>
+            </li>
+            <li>
+                <a routerLink="/gallary" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
+                    Gallary 
+                </a>
+            </li>
+            <li>
+                <a routerLink="/events" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
+                    Events 
+                </a>
+            </li>
+            <li>
+                <a routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
+                    About 
+                </a>
+            </li>
+            <li>
+                <a routerLink="/contact" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
+                    Contact 
+                </a>
+            </li>
+            <!-- <li class="dropdown">
                 <button class="dropdown-toggle more" type="button" id="dropdownMenuMoreButton" 
                 data-bs-toggle="dropdown" aria-expanded="false">
                     More
@@ -33,7 +54,7 @@
                     <li><a class="dropdown-item" href="#"> Profile </a></li>
                     <li><a class="dropdown-item" href="#"> Logout </a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </div>
     <div class="col-5 col-md-2">
@@ -45,16 +66,37 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMobileMenuButton">
-                    <li><a class="dropdown-item" routerLink="/"> Home </a></li>
-                    <li><a class="dropdown-item" routerLink="/gallary"> Gallary </a></li>
-                    <li><a class="dropdown-item" routerLink="/about"> About </a></li>
-                    <li><a class="dropdown-item" routerLink="/contact"> Contact </a></li>
-                    <li><a class="dropdown-item" routerLink="/"> More </a></li>
+                    <li>
+                        <a class="dropdown-item" routerLink="/"> 
+                            Home 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="/gallary"> 
+                            Gallary 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="/events"> 
+                            Gallary 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="/about"> 
+                            About 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="/contact"> 
+                            Contact 
+                        </a>
+                    </li>
+                    <!-- <li><a class="dropdown-item" routerLink="/"> More </a></li>
                     <li><a class="dropdown-item" routerLink="/login"> Login </a></li>
                     <ng-container>
                         <li><a class="dropdown-item" routerLink="/"> Profile </a></li>
                         <li><a class="dropdown-item" routerLink="/"> Logout </a></li>
-                    </ng-container>
+                    </ng-container> -->
                 </ul>
             </div>
             <div class="language-container">
