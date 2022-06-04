@@ -44,13 +44,76 @@
                                 <div class="form-description mb-2">
                                     For any feedback / changes you can fill up the below form
                                 </div>
-                                <form class="contact-form">
-                                    <input type="text" id="devotee-name" name="devotee-name" placeholder="Your name" title="Your name" autocomplete="nope">
-                                    <input type="email" id="devotee-email" name="devotee-email" placeholder="Email address" title="Email address" autocomplete="nope">
-                                    <input type="tel" id="devotee-number" name="devotee-number" placeholder="Tel/Mobile/#" title="Tel/Mobile/#" autocomplete="nope">
-                                    <input type="text" id="contact-subject" name="contact-subject" placeholder="Subject" title="Subject" autocomplete="nope">
-                                    <textarea id="devotee-msg" name="devotee-msg" placeholder="Your Message" title="Your Message" rows="5" maxlength="2000"></textarea>
-                                    <button id="contact-form-submit" type="submit"> SUBMIT </button>
+                                <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                                    <input type="text" id="name" name="name" formControlName="name" placeholder="Your name" title="Your name" autocomplete="nope">
+                                    <div *ngIf="getControl('name')?.invalid && (getControl('name')?.dirty || getControl('name')?.touched)" class="validation-error">
+                                        <div *ngIf="getControl('name')?.errors?.['required']">
+                                            Name is required.
+                                        </div>
+                                        <div *ngIf="getControl('name')?.errors?.['minlength']">
+                                            Name must be at least 4 characters long.
+                                        </div>
+                                        <div *ngIf="getControl('name')?.errors?.['maxlength']">
+                                            Name must be maximum 50 characters long.
+                                        </div>
+                                    </div>
+
+                                    <input type="email" id="email" name="email" formControlName="email" placeholder="Email address" title="Email address" autocomplete="nope">
+                                    <div *ngIf="getControl('email')?.invalid && (getControl('email')?.dirty || getControl('email')?.touched)" class="validation-error">
+                                        <div *ngIf="getControl('email')?.errors?.['required']">
+                                            Email is required.
+                                        </div>
+                                        <div *ngIf="getControl('email')?.errors?.['minlength']">
+                                            Email must be at least 4 characters long.
+                                        </div>
+                                        <div *ngIf="getControl('email')?.errors?.['maxlength']">
+                                            Email must be maximum 50 characters long.
+                                        </div>
+                                        <div *ngIf="getControl('email')?.errors?.['email']">
+                                            Check the email format.
+                                        </div>
+                                    </div>
+                                    
+                                    <input type="tel" id="contactNumber" name="contactNumber" formControlName="contactNumber" placeholder="Tel/Mobile/#" title="Tel/Mobile/#" autocomplete="nope">
+                                    <div *ngIf="getControl('contactNumber')?.invalid && (getControl('contactNumber')?.dirty || getControl('contactNumber')?.touched)" class="validation-error">
+                                        <div *ngIf="getControl('contactNumber')?.errors?.['required']">
+                                            Contact number is required.
+                                        </div>
+                                        <div *ngIf="getControl('contactNumber')?.errors?.['maxlength']">
+                                            Contact number must be maximum 20 characters long.
+                                        </div>
+                                    </div>
+
+                                    <input type="text" id="subject" name="subject" formControlName="subject" placeholder="Subject" title="Subject" autocomplete="nope">
+                                    <div *ngIf="getControl('subject')?.invalid && (getControl('subject')?.dirty || getControl('subject')?.touched)" class="validation-error">
+                                        <div *ngIf="getControl('subject')?.errors?.['required']">
+                                           Subject is required.
+                                        </div>
+                                        <div *ngIf="getControl('subject')?.errors?.['maxlength']">
+                                           Subject must be maximum 100 characters long.
+                                        </div>
+                                    </div>
+                                    
+                                    <textarea id="message" name="message" formControlName="message" placeholder="Your Message" title="Your Message" rows="5" maxlength="2000"></textarea>
+                                    <div *ngIf="getControl('message')?.invalid && (getControl('message')?.dirty || getControl('message')?.touched)" class="validation-error">
+                                        <div *ngIf="getControl('message')?.errors?.['required']">
+                                            Message is required.
+                                        </div>
+                                        <div *ngIf="getControl('message')?.errors?.['maxlength']">
+                                            Message must be maximum 2000 characters long.
+                                        </div>
+                                    </div>
+
+                                    <div class="google-capcha-container">
+                                        <ngx-recaptcha2 #recaptcha id="recaptcha" [siteKey]="siteKey" formControlName="recaptcha"></ngx-recaptcha2>
+                                    </div>
+                                    <div *ngIf="getControl('recaptcha')?.invalid && (getControl('recaptcha')?.dirty || getControl('recaptcha')?.touched)" class="validation-error">
+                                        <div *ngIf="getControl('recaptcha')?.errors?.['required']">
+                                            Captcha is required.
+                                        </div>
+                                    </div>
+
+                                    <button id="contact-form-submit" type="submit" [class.enabled]="contactForm.valid" [disabled]="!contactForm.valid"> SUBMIT </button>
                                 </form>
                             </div>
                         </div>
