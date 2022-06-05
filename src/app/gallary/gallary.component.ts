@@ -12,4 +12,9 @@ export class GallaryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  category = 'all';
+  getPhotoes(category: string) {
+    this.category = category;
+    console.log(category);
+  }
 }

@@ -1,0 +1,63 @@
+.gallary-header {
+    background-color: #424242;
+    border-bottom: 1px solid #ddd;
+}
+
+.gallary-title-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 90px;
+}
+
+.gallary-title-container li {
+    padding: 5px 10px;
+    font-family: 'Roboto Medium', sans-serif;
+    letter-spacing: 0.22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gallary-title-container li:hover {
+    color: #E97000;
+}
+
+.image-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid #424242;
+}
+
+.image-container .zoom {
+    display: none;
+    position: absolute;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container:hover .zoom {
+    display: block;
+}
+
+.image-container .image {
+    max-width: 100%;
+    transition: 0.3s all ease-in-out;
+}
+
+.image-container:hover .image {
+    transform: scale(1.1);
+}
+
+#myLargeModal .modal-body {
+    text-align: center;
+}

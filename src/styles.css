@@ -14,12 +14,14 @@ body {
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #E97000;
     height: 40vh;
+    width: 40vw;
 }
 
 /********** image slider custom controller css  **********/
@@ -49,4 +51,6 @@ ul {
 /********** global styles *************/
 .active-route {
     color: #E97000 !important;
+    cursor: auto !important;
+    pointer-events: none !important;
 }

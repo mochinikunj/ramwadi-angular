@@ -23,7 +23,6 @@
 .navigation-menu > li,
 .navigation-menu .dropdown-toggle {
     display: inline-block;
-    cursor: pointer;
 }
 
 .navigation-menu li > a,
