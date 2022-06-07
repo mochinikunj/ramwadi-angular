@@ -3,19 +3,19 @@
         <div class="row">
             <div class="col-12">
                 <ul class="gallary-title-container">
-                    <li [class.active-route]="category === 'all'" (click)="getPhotoes('all')" (keyboard.enter)="getPhotoes('all')"> 
+                    <li [class.active-route]="selectedCategory === 'all'" (click)="getPhotoes('all')" (keyboard.enter)="getPhotoes('all')"> 
                         All 
                     </li>
-                    <li [class.active-route]="category === 'temples'" (click)="getPhotoes('temples')" (keyboard.enter)="getPhotoes('temples')"> 
+                    <li [class.active-route]="selectedCategory === 'temples'" (click)="getPhotoes('temples')" (keyboard.enter)="getPhotoes('temples')"> 
                         Temples 
                     </li>
-                    <li [class.active-route]="category === 'foundar-guru'" (click)="getPhotoes('foundar-guru')" (keyboard.enter)="getPhotoes('foundar-guru')"> 
+                    <li [class.active-route]="selectedCategory === 'founder-guru'" (click)="getPhotoes('founder-guru')" (keyboard.enter)="getPhotoes('founder-guru')"> 
                         Foundar/Guru 
                     </li>
-                    <li [class.active-route]="category === 'sundarkand'" (click)="getPhotoes('sundarkand')" (keyboard.enter)="getPhotoes('sundarkand')"> 
+                    <li [class.active-route]="selectedCategory === 'sundarkand'" (click)="getPhotoes('sundarkand')" (keyboard.enter)="getPhotoes('sundarkand')"> 
                         Sundarkand 
                     </li>
-                    <li [class.active-route]="category === 'events'" (click)="getPhotoes('events')" (keyboard.enter)="getPhotoes('events')"> 
+                    <li [class.active-route]="selectedCategory === 'events'" (click)="getPhotoes('events')" (keyboard.enter)="getPhotoes('events')"> 
                         Events 
                     </li>
                 </ul>
@@ -28,33 +28,9 @@
     <div class="row">
         <div class="col-12">
             <div class="image-list-container">
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu1.jpg" alt="Bapu1" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
-                </div>
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu2.jpg" alt="Bapu2" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
-                </div>
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu3.jpg" alt="Bapu3" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
-                </div>
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu4.jpg" alt="Bapu4" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
-                </div>
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu5.jpg" alt="Bapu5" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
-                </div>
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu6.jpg" alt="Bapu6" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
-                </div>
-                <div class="image-container">
-                    <img class="image" src="assets/images/gallary/bapu/bapu7.jpg" alt="Bapu7" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom">
+                <div class="image-container" *ngFor="let img of imgList; let i = index;" (click)="selectedImgIndex = i;">
+                    <img class="image" [src]="img" [alt]="'Image' + (i + 1)" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal" loading="lazy">
+                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom" loading="lazy">
                 </div>
             </div>
         </div>
@@ -65,16 +41,24 @@
 <div class="modal fade" id="myLargeModal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            
-        </div>
-        <div class="modal-footer justify-content-start">
-            Test
-        </div>
+            <div class="modal-header">
+                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="single-img" [src]="imgList[selectedImgIndex]" [alt]="'Image' + (selectedImgIndex + 1)" loading="lazy">
+                <div class="navigation-container">
+                    <button class="prev-container carousel-control-prev" (click)="goToPrevImg()">
+                        <span class="prev carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="next-container carousel-control-next" (click)="goToNextImg()">
+                        <span class="next carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="modal-footer justify-content-start">
+                SitaRam
+            </div> -->
         </div>
     </div>
 </div>
