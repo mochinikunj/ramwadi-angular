@@ -64,11 +64,14 @@
 
 #myLargeModal .modal-body {
     text-align: center;
+    background-color: #424242;
 }
 
 #myLargeModal .single-img {
     max-width: 100%;
     max-height: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
