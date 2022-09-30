@@ -67,10 +67,20 @@ export class ContactComponent implements OnInit {
     }
 
     console.log(this.contactForm.value);
-    const captchaValid = await this.validateCaptcha();
-    if (captchaValid) {
+    try {
+      const captchaValid = await this.validateCaptcha();
+      if (!captchaValid) {
+        return alert('Invalid Captcha!');
+      }
+
+      // write logic to submit form
+      alert('Form Submitted Successfully!');
+      
       this.resetContactForm();
-    } else { }
+    } catch (err) {
+      const msg = 'There are some technical problems, please continue after sometime!';
+      alert(msg + JSON.stringify(err));
+    }
   }
   
 }
