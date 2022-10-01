@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,8 @@ export class CommonService {
     private http: HttpClient
   ) { }
 
-  async validateCaptcha(captchaValue: string): Promise<object> {
-    const endPoint = `${environment.nodeUrl}/api/reCaptchValidate`
-
-    const request = {
-      recaptcha: captchaValue
-    };
-
-    return await this.http.post(endPoint, request).toPromise();
+  saveContactUsForm(request: object): Observable<object> {
+    const endPoint = `${environment.nodeUrl}/api/saveContactUsForm`;
+    return this.http.post(endPoint, request);
   }
 }

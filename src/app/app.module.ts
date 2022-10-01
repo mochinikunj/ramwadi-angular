@@ -17,8 +17,11 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { EventsComponent } from './events/events.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
+  const drupalUrl = environment.drupalUrl;
+  // return new TranslateHttpLoader(http, `${drupalUrl}/sites/default/files/translations/`, '.json');
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
