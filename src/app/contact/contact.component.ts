@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
       }
     }, (err) => {
       const msg = 'There are some technical problems, please continue after sometime!';
-      alert(msg + JSON.stringify(err));
+      alert(msg);
     });
   }
 
