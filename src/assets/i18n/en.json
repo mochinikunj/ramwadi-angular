@@ -9,7 +9,7 @@
         "contact": "Contact"
     },
     "home": {
-        "about_temple_title": "Welcome to Shree Godadiyabapa Ramwadi Aashram",
+        "about_temple_title": "Welcome to Shree Premdasbapa Godadiya Ramwadi Aashram",
         "about_temple": "This Hanumanji temple is considered most holy and sacred. It is among the more prominent ones in the Swaminarayan Sampraday. The image of Hanuman was installed by Sadguru Gopalanand Swami on Ashwini vadi pancham - savant 1905 (as per Hindu calandar). The image of this temple is said to be so powerful that a mere look at it by people affected by evil spirits,drives the evil spirits out of the people affected. Sarangpur is easily reached by bus or car, as it is only 82 km from Bhavnagar. There can be a long wait at the temple gate sometimes, mainly on Saturdays.",
         "about_sundarkand_title": "About Sundarkand",
         "about_sundarkand": "The original Sundara Kanda is in Sanskrit and was composed by Valmiki, who was the first to scripturally record the Ramayana. Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman. The work depicts the adventures of Hanuman and his selflessness, strength, and devotion to Rama are emphasized in the text. Hanuman was fondly called “Sundara” by his mother Anjani and Sage Valmiki chose this name over others as the Sundara Kanda is about Hanuman's journey to Lanka.",
@@ -21,7 +21,7 @@
         },
         "prasadam_box": {
             "title": "Annakshetra",
-            "description": "Shree Godadiyabapa Ramwadi Aashram",
+            "description": "Shree Premdasbapa Godadiya Ramwadi Aashram",
             "button": "More Details"
         },
         "sundarkand_box": {
@@ -41,7 +41,7 @@
     },
     "contact": {
         "page_title": "Contact us",
-        "aashram_name": "Shree Godadiyabapa Ramwadi Aashram",
+        "aashram_name": "Shree Premdasbapa Godadiya Ramwadi Aashram",
         "address_title": "Jay SiyaRam",
         "address": "P.O. Salangpur(Hanuman), Tal: Barwala, Botad, Gujarat, 382450.",
         "mobile_label": "Mobile",
@@ -51,7 +51,7 @@
         "email_label": "Email",
         "email": "ramwadikarjan@gmail.com",
         "form": {
-            "title": "For any feedback / changes you can fill up the below form",
+            "title": "For any feedback/changes you can fill up the below form",
             "placeholder": {
                 "name": "Your name",
                 "email": "Email address",
@@ -95,6 +95,6 @@
     },
     "footer": {
         "follow_us": "Follow us",
-        "copyright_notice": "2022 Shree Godadiyabapa Ramwadi Aashram - All rights reserved | Official website of Ramwadi Karjan"
+        "copyright_notice": "2023 Shree Premdasbapa Godadiya Ramwadi Aashram - All rights reserved | Official website of Ramwadi"
     }
 }

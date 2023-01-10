@@ -29,7 +29,7 @@
                                     <a href="tel:{{ 'contact.mobile' | translate }}" target="_blank"> +91 {{ "contact.mobile" | translate }} </a> <br>
                                     
                                     <strong> {{ "contact.website_label" | translate }}: </strong> 
-                                    <a href="{{ 'contact.website' | translate }}" target="_blank"> {{ "contact.website" | translate }} </a> <br>
+                                    <a href="{{ 'contact.website' | translate }}" target="_blank"> {{ ("contact.website" | translate).slice(8) }} </a> <br>
                                     
                                     <strong> {{ "contact.email_label" | translate }}: </strong> 
                                     <a href="mailto:{{ 'contact.email' | translate }}" target="_blank"> {{ "contact.email" | translate }} </a>

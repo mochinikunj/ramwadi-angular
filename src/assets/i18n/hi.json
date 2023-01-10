@@ -2,99 +2,99 @@
     "title": "रामवाड़ी",
     "sitaram": "सीताराम",
     "header": {
-        "home": "Home",
-        "gallery": "Gallery",
-        "events": "Events",
-        "about": "About",
-        "contact": "Contact"
+        "home": "मुख्य पेज",
+        "gallery": "फोटो गैलरी",
+        "events": "कार्यक्रम",
+        "about": "अधिक जानकारी",
+        "contact": "संपर्क"
     },
     "home": {
-        "about_temple_title": "श्री गोड्ड्याबापा रामवाड़ी आश्रममें आपका स्वागत है।",
+        "about_temple_title": "श्री प्रेमदासबापा गोदड़ीया रामवाड़ी आश्रममें आपका स्वागत है।",
         "about_temple": "यह हनुमानजी मंदिर सबसे पवित्र और पवित्र माना जाता है। यह स्वामीनारायण संप्रदाय में अधिक प्रमुख लोगों में से एक है। हनुमान की छवि सद्गुरु गोपालानंद स्वामी द्वारा अश्विनी वादी पंचम - सावंत 1905 (हिंदू कैलेंडर के अनुसार) पर स्थापित की गई थी। कहा जाता है कि इस मंदिर की छवि इतनी शक्तिशाली है कि बुरी आत्माओं से प्रभावित लोगों द्वारा इसे देखने मात्र से बुरी आत्माओं को प्रभावित लोगों से बाहर निकाल दिया जाता है। सारंगपुर बस या कार द्वारा आसानी से पहुँचा जा सकता है, क्योंकि यह भावनगर से केवल 82 किमी दूर है। मंदिर के द्वार पर कभी-कभी, मुख्य रूप से शनिवार को लंबा इंतजार करना पड़ सकता है।",
-        "about_sundarkand_title": "About Sundarkand",
+        "about_sundarkand_title": "सुंदरकांड",
         "about_sundarkand": "मूल सुंदर कांड संस्कृत में है और इसकी रचना वाल्मीकि ने की थी, जिन्होंने सबसे पहले रामायण को लिपिबद्ध किया था। सुंदर कांड रामायण का एकमात्र अध्याय है जिसमें नायक राम नहीं, बल्कि हनुमान हैं। काम में हनुमान के कारनामों को दर्शाया गया है और उनकी निस्वार्थता, शक्ति और राम के प्रति समर्पण पर पाठ में जोर दिया गया है। हनुमान को उनकी मां अंजनी द्वारा प्यार से “सुंदरा” कहा जाता था और ऋषि वाल्मीकि ने इस नाम को दूसरों के ऊपर चुना क्योंकि सुंदर कांडा हनुमान की लंका की यात्रा के बारे में है।",
-        "know_more": "Know more",
+        "know_more": "अधिक जानकारी",
         "donation_box": {
-            "title": "Online Donation",
-            "description": "We are now accepting online donations",
-            "button": "Go to Donation Page"
+            "title": "ऑनलाइन दान",
+            "description": "अब हम ऑनलाइन दान स्वीकार कर रहे हैं",
+            "button": "दान पेज पर जाएं"
         },
         "prasadam_box": {
-            "title": "Annakshetra",
-            "description": "Shree Godadiyabapa Ramwadi Aashram",
-            "button": "More Details"
+            "title": "अन्नक्षेत्र",
+            "description": "श्री प्रेमदासबापा गोदड़ीया रामवाड़ी आश्रम",
+            "button": "अधिक जानकारी"
         },
         "sundarkand_box": {
-            "title": "Sundarkand Group",
-            "description": "Shree Godadiyabapa Yuvak Mandal",
-            "button": "Register Now"
+            "title": "सुन्दरकाण्ड ग्रुप",
+            "description": "श्री गोदड़ीयाबापा युवा मंडल",
+            "button": "रजिस्टर करें"
         }
     },
     "gallery" : {
         "categories": {
-            "all": "All",
-            "temples": "Temples",
-            "founder": "Founder/Guru",
-            "sundarkand": "Sundarkand",
-            "events": "Events"
+            "all": "सभी",
+            "temples": "मंदिर",
+            "founder": "संस्थापक/गुरु",
+            "sundarkand": "सुन्दरकाण्ड",
+            "events": "कार्यक्रम"
         }
     },
     "contact": {
-        "page_title": "Contact us",
-        "aashram_name": "Shree Godadiyabapa Ramwadi Aashram",
-        "address_title": "Jay SiyaRam",
+        "page_title": "संपर्क करें",
+        "aashram_name": "श्री प्रेमदासबापा गोदड़ीया रामवाड़ी आश्रम",
+        "address_title": "जय सियाराम",
         "address": "P.O. Salangpur(Hanuman), Tal: Barwala, Botad, Gujarat, 382450.",
-        "mobile_label": "Mobile",
+        "mobile_label": "मोबाइल",
         "mobile": "9228231735",
-        "website_label": "Website",
+        "website_label": "वेबसाइट",
         "website": "https://www.ramwadi.org",
-        "email_label": "Email",
+        "email_label": "ई-मेल",
         "email": "ramwadikarjan@gmail.com",
         "form": {
-            "title": "For any feedback / changes you can fill up the below form",
+            "title": "किसी भी प्रतिक्रिया/परिवर्तन के लिए आप नीचे दिया गया फॉर्म भर सकते हैं",
             "placeholder": {
-                "name": "Your name",
-                "email": "Email address",
-                "contact": "Tel/Mobile/#",
-                "subject": "Subject",
-                "message": "Your message"
+                "name": "आपका नाम",
+                "email": "ई-मेल एड्रेस",
+                "contact": "टेलीफोन/मोबाइल/#",
+                "subject": "विषय",
+                "message": "आपका सन्देश"
             },
             "errors": {
                 "name": {
-                    "required": "Name is required.",
-                    "min_length": "Name must be at least 2 characters long.",
-                    "max_length": "Name must be maximum 50 characters long."
+                    "required": "नाम आवश्यक है।",
+                    "min_length": "नाम कम से कम 2 वर्ण लंबा होना चाहिए।",
+                    "max_length": "नाम अधिकतम 50 वर्णों का होना चाहिए।"
                 },
                 "email": {
-                    "required": "Email is required.",
-                    "min_length": "Email must be at least 5 characters long.",
-                    "max_length": "Email must be maximum 50 characters long.",
-                    "format": " Check the email format."
+                    "required": "ई-मेल जरुरी है।",
+                    "min_length": "ई-मेल कम से कम 5 वर्ण लंबा होना चाहिए।",
+                    "max_length": "ई-मेल अधिकतम 50 वर्णों का होना चाहिए।",
+                    "format": "ई-मेल फॉर्मेटकी जाँच करें।"
                 },
                 "contact": {
-                    "required": "Contact is required.",
-                    "min_length": "Contact must be at least 10 characters long.",
-                    "max_length": "Contact must be maximum 20 characters long."
+                    "required": "संपर्क नंबर आवश्यक है।",
+                    "min_length": "संपर्क नंबर कम से कम 10 वर्ण लंबा होना चाहिए।",
+                    "max_length": "संपर्क नंबर अधिकतम 20 वर्णों का होना चाहिए।"
                 },
                 "subject": {
-                    "required": "Subject is required.",
-                    "min_length": "Subject must be at least 5 characters long.",
-                    "max_length": "Subject must be maximum 100 characters long."
+                    "required": "विषय आवश्यक है।",
+                    "min_length": "विषय कम से कम 5 वर्ण लंबा होना चाहिए।",
+                    "max_length": "विषय अधिकतम 100 वर्णों का होना चाहिए।"
                 },
                 "message": {
-                    "required": "Message is required.",
-                    "min_length": "Message must be at least 10 characters long.",
-                    "max_length": "Message must be maximum 2000 characters long."
+                    "required": "संदेश आवश्यक है।",
+                    "min_length": "संदेश कम से कम 10 वर्ण लंबा होना चाहिए।",
+                    "max_length": "संदेश अधिकतम 2000 वर्णों का होना चाहिए।"
                 },
                 "captcha": {
-                    "required": "Captcha is required."
+                    "required": "वेरिफिकेशन आवश्यक है।"
                 }
             },
-            "submit": "SUBMIT"
+            "submit": "सबमिट करें"
         }
     },
     "footer": {
-        "follow_us": "Follow us",
-        "copyright_notice": "2022 Shree Godadiyabapa Ramwadi Aashram - All rights reserved | Official website of Ramwadi Karjan"
+        "follow_us": "फॉलो करें",
+        "copyright_notice": "2023 श्री प्रेमदासबापा गोदड़ीया रामवाड़ी आश्रम - सर्वाधिकार सुरक्षित | रामवाड़ी की आधिकारिक वेबसाइट"
     }
 }

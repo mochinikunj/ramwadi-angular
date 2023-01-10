@@ -2,99 +2,99 @@
     "title": "રામવાડી",
     "sitaram": "સીતારામ",
     "header": {
-        "home": "Home",
-        "gallery": "Gallery",
-        "events": "Events",
-        "about": "About",
-        "contact": "Contact"
+        "home": "મુખ્ય પેજ",
+        "gallery": "ફોટો ગેલેરી",
+        "events": "કાર્યક્રમ",
+        "about": "વધુ માહિતી",
+        "contact": "સંપર્ક"
     },
     "home": {
-        "about_temple_title": "શ્રી ગોદડીયાબાપા રામવાડી આશ્રમમાં આપનું સ્વાગત છે.",
+        "about_temple_title": "શ્રી પ્રેમદાસબાપા ગોદડીયા રામવાડી આશ્રમમાં આપનું સ્વાગત છે.",
         "about_temple": "આ હનુમાનજી મંદિર સૌથી પવિત્ર અને પવિત્ર માનવામાં આવે છે. તે સ્વામિનારાયણ સંપ્રદાયમાં વધુ અગ્રણી લોકોમાંનું એક છે. હનુમાનની છબી સદગુરુ ગોપાલાનંદ સ્વામી દ્વારા અશ્વિની વદી પાંચમ - સવંત 1905 (હિંદુ કેલેન્ડર મુજબ) પર સ્થાપિત કરવામાં આવી હતી. આ મંદિરની છબી એટલી શક્તિશાળી હોવાનું કહેવાય છે કે દુષ્ટ આત્માઓથી પ્રભાવિત લોકો દ્વારા તેને માત્ર જોવાથી જ દુષ્ટ આત્માઓ પ્રભાવિત લોકોમાંથી બહાર નીકળી જાય છે. સારંગપુર બસ અથવા કાર દ્વારા સરળતાથી પહોંચી શકાય છે, કારણ કે તે ભાવનગરથી માત્ર 82 કિમી દૂર છે. કેટલીકવાર મંદિરના દ્વાર પર લાંબી રાહ જોવી પડી શકે છે, મુખ્યત્વે શનિવારે.",
-        "about_sundarkand_title": "About Sundarkand",
+        "about_sundarkand_title": "સુંદરકાંડ",
         "about_sundarkand": "મૂળ સુંદરકાંડ સંસ્કૃતમાં છે અને તેની રચના વાલ્મીકિ દ્વારા કરવામાં આવી હતી, જેમણે શાસ્ત્રોક્ત રીતે રામાયણની નોંધ લીધી હતી. સુંદરકાંડ એ રામાયણનો એકમાત્ર અધ્યાય છે જેમાં નાયક રામ નથી, બલ્કે હનુમાન છે. આ કૃતિમાં હનુમાનના સાહસોનું નિરૂપણ કરવામાં આવ્યું છે અને લખાણમાં તેમની નિઃસ્વાર્થતા, શક્તિ અને રામ પ્રત્યેની ભક્તિ પર ભાર મૂકવામાં આવ્યો છે. હનુમાનને તેમની માતા અંજની દ્વારા પ્રેમથી “સુંદરા” કહેવામાં આવતું હતું અને ઋષિ વાલ્મીકિએ આ નામ અન્ય લોકો કરતાં પસંદ કર્યું હતું કારણ કે સુંદરકાંડ હનુમાનની લંકા યાત્રા વિશે છે.",
-        "know_more": "Know more",
+        "know_more": "વધુ જાણો",
         "donation_box": {
-            "title": "Online Donation",
-            "description": "We are now accepting online donations",
-            "button": "Go to Donation Page"
+            "title": "ઓનલાઇન દાન",
+            "description": "અમે હવે ઓનલાઈન દાન સ્વીકારી રહ્યા છીએ",
+            "button": "દાન પેજ પર જાઓ"
         },
         "prasadam_box": {
-            "title": "Annakshetra",
-            "description": "Shree Godadiyabapa Ramwadi Aashram",
-            "button": "More Details"
+            "title": "અન્નક્ષેત્ર",
+            "description": "શ્રી પ્રેમદાસબાપા ગોદડીયા રામવાડી આશ્રમ",
+            "button": "વધુ વિગતો"
         },
         "sundarkand_box": {
-            "title": "Sundarkand Group",
-            "description": "Shree Godadiyabapa Yuvak Mandal",
-            "button": "Register Now"
+            "title": "સુંદરકાંડ ગ્રુપ",
+            "description": "શ્રી ગોદડીયાબાપા યુવક મંડળ",
+            "button": "અત્યારે નોંધાવો"
         }
     },
     "gallery" : {
         "categories": {
-            "all": "All",
-            "temples": "Temples",
-            "founder": "Founder/Guru",
-            "sundarkand": "Sundarkand",
-            "events": "Events"
+            "all": "બધા",
+            "temples": "મંદિર",
+            "founder": "સ્થાપક/ગુરુ",
+            "sundarkand": "સુંદરકાંડ",
+            "events": "કાર્યક્રમ"
         }
     },
     "contact": {
-        "page_title": "Contact us",
-        "aashram_name": "Shree Godadiyabapa Ramwadi Aashram",
-        "address_title": "Jay SiyaRam",
+        "page_title": "સંપર્ક કરો",
+        "aashram_name": "શ્રી પ્રેમદાસબાપા ગોદડીયા રામવાડી આશ્રમ",
+        "address_title": "જય સિયારામ",
         "address": "P.O. Salangpur(Hanuman), Tal: Barwala, Botad, Gujarat, 382450.",
-        "mobile_label": "Mobile",
+        "mobile_label": "મોબાઈલ",
         "mobile": "9228231735",
-        "website_label": "Website",
+        "website_label": "વેબસાઈટ",
         "website": "https://www.ramwadi.org",
-        "email_label": "Email",
+        "email_label": "ઈ-મેઈલ",
         "email": "ramwadikarjan@gmail.com",
         "form": {
-            "title": "For any feedback / changes you can fill up the below form",
+            "title": "કોઈપણ પ્રતિક્રિયા/ફેરફારો માટે તમે નીચેનું ફોર્મ ભરી શકો છો",
             "placeholder": {
-                "name": "Your name",
-                "email": "Email address",
-                "contact": "Tel/Mobile/#",
-                "subject": "Subject",
-                "message": "Your message"
+                "name": "તમારું નામ",
+                "email": "ઈ-મેઈલ એડ્રેસ",
+                "contact": "ટેલિફોન/મોબાઇલ/#",
+                "subject": "વિષય",
+                "message": "તમારો સંદેશો"
             },
             "errors": {
                 "name": {
-                    "required": "Name is required.",
-                    "min_length": "Name must be at least 2 characters long.",
-                    "max_length": "Name must be maximum 50 characters long."
+                    "required": "નામ જરૂરી છે.",
+                    "min_length": "નામ ઓછામાં ઓછા 2 અક્ષર લાંબુ હોવું જોઈએ.",
+                    "max_length": "નામ મહત્તમ 50 અક્ષર લાંબુ હોવું જોઈએ."
                 },
                 "email": {
-                    "required": "Email is required.",
-                    "min_length": "Email must be at least 5 characters long.",
-                    "max_length": "Email must be maximum 50 characters long.",
-                    "format": " Check the email format."
+                    "required": "ઇ-મેઇલ આવશ્યક છે.",
+                    "min_length": "ઈ-મેલ ઓછામાં ઓછો 5 અક્ષર લાંબો હોવો જોઈએ.",
+                    "max_length": "ઈ-મેલ મહત્તમ 50 અક્ષર લાંબો હોવો જોઈએ.",
+                    "format": "ઇ-મેઇલ ફોર્મેટ તપાસો."
                 },
                 "contact": {
-                    "required": "Contact is required.",
-                    "min_length": "Contact must be at least 10 characters long.",
-                    "max_length": "Contact must be maximum 20 characters long."
+                    "required": "સંપર્ક નંબર જરૂરી છે.",
+                    "min_length": "સંપર્ક નંબર ઓછામાં ઓછો 10 અક્ષર લાંબો હોવો જોઈએ.",
+                    "max_length": "સંપર્ક નંબર મહત્તમ 20 અક્ષર લાંબો હોવો જોઈએ."
                 },
                 "subject": {
-                    "required": "Subject is required.",
-                    "min_length": "Subject must be at least 5 characters long.",
-                    "max_length": "Subject must be maximum 100 characters long."
+                    "required": "વિષય જરૂરી છે.",
+                    "min_length": "વિષય ઓછામાં ઓછો 5 અક્ષર લાંબો હોવો જોઈએ.",
+                    "max_length": "વિષય મહત્તમ 100 અક્ષર લાંબો હોવો જોઈએ."
                 },
                 "message": {
-                    "required": "Message is required.",
-                    "min_length": "Message must be at least 10 characters long.",
-                    "max_length": "Message must be maximum 2000 characters long."
+                    "required": "સંદેશ જરૂરી છે.",
+                    "min_length": "સંદેશ ઓછામાં ઓછો 10 અક્ષર લાંબો હોવો જોઈએ.",
+                    "max_length": "સંદેશ મહત્તમ 2000 અક્ષર લાંબો હોવો જોઈએ."
                 },
                 "captcha": {
-                    "required": "Captcha is required."
+                    "required": "વેરિફિકેશન જરૂરી છે."
                 }
             },
-            "submit": "SUBMIT"
+            "submit": "સબમિટ કરો"
         }
     },
     "footer": {
-        "follow_us": "Follow us",
-        "copyright_notice": "2022 Shree Godadiyabapa Ramwadi Aashram - All rights reserved | Official website of Ramwadi Karjan"
+        "follow_us": "ફોલોવ કરો",
+        "copyright_notice": "2023 શ્રી પ્રેમદાસબાપા ગોદડીયા રામવાડી આશ્રમ - સર્વાધિકાર આરક્ષિત | રામવાડીની ઓફિશ્યિલ વેબસાઇટ"
     }
 }
