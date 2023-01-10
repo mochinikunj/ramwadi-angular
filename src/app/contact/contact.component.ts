@@ -23,11 +23,11 @@ export class ContactComponent implements OnInit {
   }
 
   contactForm = this.fb.group({
-    name: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
-    email: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50), Validators.email]],
-    contactNumber: ['', [Validators.required, Validators.maxLength(20) ]],
-    subject: ['', [Validators.required, Validators.maxLength(100)]],
-    message: ['', [Validators.required, Validators.maxLength(2000)]],
+    name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+    email: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email]],
+    contactNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(20) ]],
+    subject: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(100)]],
+    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(2000)]],
     recaptcha: ['', Validators.required]
   });
   

@@ -14,7 +14,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'gallary',
+    path: 'gallery',
     component: GallaryComponent
   },
   {

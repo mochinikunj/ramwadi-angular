@@ -7,7 +7,7 @@
                         <div class="col-12">
                             <div class="contact-form-header">
                                 <img src="assets/images/welcome-logo.png" class="center-img d-block" alt="Welcome to Ramwadi">
-                                <div class="form-title"> Contact Us </div>
+                                <div class="form-title"> {{ "contact.page_title" | translate }} </div>
                                 <img src="assets/images/welcome-logo-border.png" class="center-img d-block" alt="Logo border">
                             </div>
                         </div>
@@ -16,91 +16,98 @@
                         <div class="col-12 col-md-5">
                             <div class="temple-contact">
                                 <div class="form-description mb-2">
-                                    Jay SiyaRam
+                                    {{ "contact.address_title" | translate }}
                                 </div>
                                 <div class="temple-name">
-                                    Shree Godadiyabapa Ramwadi Aashram
+                                    {{ "contact.aashram_name" | translate }}
                                 </div>
                                 <div class="temple-address mb-2">
-                                    P.O. Salangpur(Hanuman), Tal: Barwala, Botad, Gujarat, 382450.
+                                    {{ "contact.address" | translate }}
                                 </div>
                                 <div class="contact-details">
-                                    <strong> Mobile: </strong> 
-                                    <a href="tel:9228231735" target="_blank"> +91 9228231735 </a> <br>
+                                    <strong> {{ "contact.mobile_label" | translate }}: </strong> 
+                                    <a href="tel:{{ 'contact.mobile' | translate }}" target="_blank"> +91 {{ "contact.mobile" | translate }} </a> <br>
                                     
-                                    <strong> Website: </strong> 
-                                    <a href="https://www.google.com" target="_blank"> www.ramwadi.org </a> <br>
+                                    <strong> {{ "contact.website_label" | translate }}: </strong> 
+                                    <a href="{{ 'contact.website' | translate }}" target="_blank"> {{ "contact.website" | translate }} </a> <br>
                                     
-                                    <strong> Email: </strong> 
-                                    <a href="mailto:blaab927@gmail.com" target="_blank"> ramwadikarjan@gmail.com </a>
+                                    <strong> {{ "contact.email_label" | translate }}: </strong> 
+                                    <a href="mailto:{{ 'contact.email' | translate }}" target="_blank"> {{ "contact.email" | translate }} </a>
                                 </div>
                             </div>
-                            <div class="location-container">
-
-                            </div>
+                            <!-- <div class="location-container"></div> -->
                         </div>
                         <div class="col-12 col-md-7 mt-4 mt-md-0">
                             <div class="contact-form-container">                         
                                 <div class="form-description mb-2">
-                                    For any feedback / changes you can fill up the below form
+                                    {{ "contact.form.title" | translate }}
                                 </div>
                                 <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                                    <input type="text" id="name" name="name" formControlName="name" placeholder="Your name" title="Your name" autocomplete="nope">
+                                    <input type="text" id="name" name="name" formControlName="name" placeholder="{{ 'contact.form.placeholder.name' | translate }}" title="{{ 'contact.form.placeholder.name' | translate }}" autocomplete="nope">
                                     <div *ngIf="getControl('name')?.invalid && (getControl('name')?.dirty || getControl('name')?.touched)" class="validation-error">
                                         <div *ngIf="getControl('name')?.errors?.['required']">
-                                            Name is required.
+                                            {{ "contact.form.errors.name.required" | translate }}
                                         </div>
                                         <div *ngIf="getControl('name')?.errors?.['minlength']">
-                                            Name must be at least 4 characters long.
+                                            {{ "contact.form.errors.name.min_length" | translate }}
                                         </div>
                                         <div *ngIf="getControl('name')?.errors?.['maxlength']">
-                                            Name must be maximum 50 characters long.
+                                            {{ "contact.form.errors.name.max_length" | translate }}
                                         </div>
                                     </div>
 
-                                    <input type="email" id="email" name="email" formControlName="email" placeholder="Email address" title="Email address" autocomplete="nope">
+                                    <input type="email" id="email" name="email" formControlName="email" placeholder="{{ 'contact.form.placeholder.email' | translate }}" title="{{ 'contact.form.placeholder.email' | translate }}" autocomplete="nope">
                                     <div *ngIf="getControl('email')?.invalid && (getControl('email')?.dirty || getControl('email')?.touched)" class="validation-error">
                                         <div *ngIf="getControl('email')?.errors?.['required']">
-                                            Email is required.
+                                            {{ "contact.form.errors.email.required" | translate }}
                                         </div>
                                         <div *ngIf="getControl('email')?.errors?.['minlength']">
-                                            Email must be at least 4 characters long.
+                                            {{ "contact.form.errors.email.min_length" | translate }}
                                         </div>
                                         <div *ngIf="getControl('email')?.errors?.['maxlength']">
-                                            Email must be maximum 50 characters long.
+                                            {{ "contact.form.errors.email.max_length" | translate }}
                                         </div>
                                         <div *ngIf="getControl('email')?.errors?.['email']">
-                                            Check the email format.
+                                            {{ "contact.form.errors.email.format" | translate }}
                                         </div>
                                     </div>
                                     
-                                    <input type="tel" id="contactNumber" name="contactNumber" formControlName="contactNumber" placeholder="Tel/Mobile/#" title="Tel/Mobile/#" autocomplete="nope">
+                                    <input type="tel" id="contactNumber" name="contactNumber" formControlName="contactNumber" placeholder="{{ 'contact.form.placeholder.contact' | translate }}" title="{{ 'contact.form.placeholder.contact' | translate }}" autocomplete="nope">
                                     <div *ngIf="getControl('contactNumber')?.invalid && (getControl('contactNumber')?.dirty || getControl('contactNumber')?.touched)" class="validation-error">
                                         <div *ngIf="getControl('contactNumber')?.errors?.['required']">
-                                            Contact number is required.
+                                            {{ "contact.form.errors.contact.required" | translate }}
+                                        </div>
+                                        <div *ngIf="getControl('contactNumber')?.errors?.['minlength']">
+                                            {{ "contact.form.errors.contact.min_length" | translate }}
                                         </div>
                                         <div *ngIf="getControl('contactNumber')?.errors?.['maxlength']">
-                                            Contact number must be maximum 20 characters long.
+                                            {{ "contact.form.errors.contact.max_length" | translate }}
                                         </div>
                                     </div>
 
-                                    <input type="text" id="subject" name="subject" formControlName="subject" placeholder="Subject" title="Subject" autocomplete="nope">
+                                    <input type="text" id="subject" name="subject" formControlName="subject" placeholder="{{ 'contact.form.placeholder.subject' | translate }}" title="{{ 'contact.form.placeholder.subject' | translate }}" autocomplete="nope">
                                     <div *ngIf="getControl('subject')?.invalid && (getControl('subject')?.dirty || getControl('subject')?.touched)" class="validation-error">
                                         <div *ngIf="getControl('subject')?.errors?.['required']">
-                                           Subject is required.
+                                            {{ "contact.form.errors.subject.required" | translate }}
                                         </div>
+                                        <div *ngIf="getControl('subject')?.errors?.['minlength']">
+                                            {{ "contact.form.errors.subject.min_length" | translate }}
+                                         </div>
                                         <div *ngIf="getControl('subject')?.errors?.['maxlength']">
-                                           Subject must be maximum 100 characters long.
+                                            {{ "contact.form.errors.subject.max_length" | translate }}
                                         </div>
                                     </div>
                                     
-                                    <textarea id="message" name="message" formControlName="message" placeholder="Your Message" title="Your Message" rows="5" maxlength="2000"></textarea>
+                                    <textarea id="message" name="message" formControlName="message" placeholder="{{ 'contact.form.placeholder.message' | translate }}" title="{{ 'contact.form.placeholder.message' | translate }}" rows="5" maxlength="2000"></textarea>
                                     <div *ngIf="getControl('message')?.invalid && (getControl('message')?.dirty || getControl('message')?.touched)" class="validation-error">
                                         <div *ngIf="getControl('message')?.errors?.['required']">
-                                            Message is required.
+                                            {{ "contact.form.errors.message.required" | translate }}
+                                        </div>
+                                        <div *ngIf="getControl('message')?.errors?.['minlength']">
+                                            {{ "contact.form.errors.message.min_length" | translate }}
                                         </div>
                                         <div *ngIf="getControl('message')?.errors?.['maxlength']">
-                                            Message must be maximum 2000 characters long.
+                                            {{ "contact.form.errors.message.max_length" | translate }}
                                         </div>
                                     </div>
 
@@ -109,11 +116,11 @@
                                     </div>
                                     <div *ngIf="getControl('recaptcha')?.invalid && (getControl('recaptcha')?.dirty || getControl('recaptcha')?.touched)" class="validation-error">
                                         <div *ngIf="getControl('recaptcha')?.errors?.['required']">
-                                            Captcha is required.
+                                            {{ "contact.form.errors.captcha.required" | translate }}
                                         </div>
                                     </div>
 
-                                    <button id="contact-form-submit" type="submit" [class.enabled]="contactForm.valid" [disabled]="!contactForm.valid"> SUBMIT </button>
+                                    <button id="contact-form-submit" type="submit" [class.enabled]="contactForm.valid" [disabled]="!contactForm.valid"> {{ "contact.form.submit" | translate }} </button>
                                 </form>
                             </div>
                         </div>

@@ -1,8 +1,100 @@
 {
     "title": "Ramwadi",
     "sitaram": "SitaRam",
+    "header": {
+        "home": "Home",
+        "gallery": "Gallery",
+        "events": "Events",
+        "about": "About",
+        "contact": "Contact"
+    },
     "home": {
-        "brief_about_temple": "This Hanumanji temple is considered most holy and sacred. It is among the more prominent ones in the Swaminarayan Sampraday. The image of Hanuman was installed by Sadguru Gopalanand Swami on Ashwini vadi pancham - savant 1905 (as per Hindu calandar). The image of this temple is said to be so powerful that a mere look at it by people affected by evil spirits,drives the evil spirits out of the people affected. Sarangpur is easily reached by bus or car, as it is only 82 km from Bhavnagar. There can be a long wait at the temple gate sometimes, mainly on Saturdays.",
-        "brief_about_sundarkand": "The original Sundara Kanda is in Sanskrit and was composed by Valmiki, who was the first to scripturally record the Ramayana. Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman. The work depicts the adventures of Hanuman and his selflessness, strength, and devotion to Rama are emphasized in the text. Hanuman was fondly called “Sundara” by his mother Anjani and Sage Valmiki chose this name over others as the Sundara Kanda is about Hanuman's journey to Lanka."
+        "about_temple_title": "Welcome to Shree Godadiyabapa Ramwadi Aashram",
+        "about_temple": "This Hanumanji temple is considered most holy and sacred. It is among the more prominent ones in the Swaminarayan Sampraday. The image of Hanuman was installed by Sadguru Gopalanand Swami on Ashwini vadi pancham - savant 1905 (as per Hindu calandar). The image of this temple is said to be so powerful that a mere look at it by people affected by evil spirits,drives the evil spirits out of the people affected. Sarangpur is easily reached by bus or car, as it is only 82 km from Bhavnagar. There can be a long wait at the temple gate sometimes, mainly on Saturdays.",
+        "about_sundarkand_title": "About Sundarkand",
+        "about_sundarkand": "The original Sundara Kanda is in Sanskrit and was composed by Valmiki, who was the first to scripturally record the Ramayana. Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman. The work depicts the adventures of Hanuman and his selflessness, strength, and devotion to Rama are emphasized in the text. Hanuman was fondly called “Sundara” by his mother Anjani and Sage Valmiki chose this name over others as the Sundara Kanda is about Hanuman's journey to Lanka.",
+        "know_more": "Know more",
+        "donation_box": {
+            "title": "Online Donation",
+            "description": "We are now accepting online donations",
+            "button": "Go to Donation Page"
+        },
+        "prasadam_box": {
+            "title": "Annakshetra",
+            "description": "Shree Godadiyabapa Ramwadi Aashram",
+            "button": "More Details"
+        },
+        "sundarkand_box": {
+            "title": "Sundarkand Group",
+            "description": "Shree Godadiyabapa Yuvak Mandal",
+            "button": "Register Now"
+        }
+    },
+    "gallery" : {
+        "categories": {
+            "all": "All",
+            "temples": "Temples",
+            "founder": "Founder/Guru",
+            "sundarkand": "Sundarkand",
+            "events": "Events"
+        }
+    },
+    "contact": {
+        "page_title": "Contact us",
+        "aashram_name": "Shree Godadiyabapa Ramwadi Aashram",
+        "address_title": "Jay SiyaRam",
+        "address": "P.O. Salangpur(Hanuman), Tal: Barwala, Botad, Gujarat, 382450.",
+        "mobile_label": "Mobile",
+        "mobile": "9228231735",
+        "website_label": "Website",
+        "website": "https://www.ramwadi.org",
+        "email_label": "Email",
+        "email": "ramwadikarjan@gmail.com",
+        "form": {
+            "title": "For any feedback / changes you can fill up the below form",
+            "placeholder": {
+                "name": "Your name",
+                "email": "Email address",
+                "contact": "Tel/Mobile/#",
+                "subject": "Subject",
+                "message": "Your message"
+            },
+            "errors": {
+                "name": {
+                    "required": "Name is required.",
+                    "min_length": "Name must be at least 2 characters long.",
+                    "max_length": "Name must be maximum 50 characters long."
+                },
+                "email": {
+                    "required": "Email is required.",
+                    "min_length": "Email must be at least 5 characters long.",
+                    "max_length": "Email must be maximum 50 characters long.",
+                    "format": " Check the email format."
+                },
+                "contact": {
+                    "required": "Contact is required.",
+                    "min_length": "Contact must be at least 10 characters long.",
+                    "max_length": "Contact must be maximum 20 characters long."
+                },
+                "subject": {
+                    "required": "Subject is required.",
+                    "min_length": "Subject must be at least 5 characters long.",
+                    "max_length": "Subject must be maximum 100 characters long."
+                },
+                "message": {
+                    "required": "Message is required.",
+                    "min_length": "Message must be at least 10 characters long.",
+                    "max_length": "Message must be maximum 2000 characters long."
+                },
+                "captcha": {
+                    "required": "Captcha is required."
+                }
+            },
+            "submit": "SUBMIT"
+        }
+    },
+    "footer": {
+        "follow_us": "Follow us",
+        "copyright_notice": "2022 Shree Godadiyabapa Ramwadi Aashram - All rights reserved | Official website of Ramwadi Karjan"
     }
 }

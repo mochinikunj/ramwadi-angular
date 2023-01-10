@@ -4,19 +4,19 @@
             <div class="col-12">
                 <ul class="gallary-title-container">
                     <li [class.active-route]="selectedCategory === 'all'" (click)="getPhotoes('all')" (keyboard.enter)="getPhotoes('all')"> 
-                        All 
+                        {{ "gallery.categories.all" | translate }} 
                     </li>
                     <li [class.active-route]="selectedCategory === 'temples'" (click)="getPhotoes('temples')" (keyboard.enter)="getPhotoes('temples')"> 
-                        Temples 
+                        {{ "gallery.categories.temples" | translate }} 
                     </li>
                     <li [class.active-route]="selectedCategory === 'founder-guru'" (click)="getPhotoes('founder-guru')" (keyboard.enter)="getPhotoes('founder-guru')"> 
-                        Foundar/Guru 
+                        {{ "gallery.categories.founder" | translate }} 
                     </li>
                     <li [class.active-route]="selectedCategory === 'sundarkand'" (click)="getPhotoes('sundarkand')" (keyboard.enter)="getPhotoes('sundarkand')"> 
-                        Sundarkand 
+                        {{ "gallery.categories.sundarkand" | translate }} 
                     </li>
                     <li [class.active-route]="selectedCategory === 'events'" (click)="getPhotoes('events')" (keyboard.enter)="getPhotoes('events')"> 
-                        Events 
+                        {{ "gallery.categories.events" | translate }} 
                     </li>
                 </ul>
             </div>

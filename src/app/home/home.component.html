@@ -39,16 +39,14 @@
                         <div class="welcome-header">
                             <img src="assets/images/welcome-logo.png" class="d-block" alt="Welcome to Ramwadi">
                             <span class="welcome-title">
-                                Welcome to 
-                                <br>
-                                Shree Godadiyabapa Ramwadi Aashram
+                                {{ "home.about_temple_title" | translate }}
                             </span>
                             <img src="assets/images/welcome-logo-border.png" class="d-block" alt="Logo border">
                         </div>
                         <div class="welcome-description">
-                            {{ "home.brief_about_temple" | translate }} 
+                            {{ "home.about_temple" | translate }} 
                         </div>
-                        <a class="know-more" routerLink="/about"> Know more </a>
+                        <a class="know-more" routerLink="/about"> {{ "home.know_more" | translate }} </a>
                         <img src="assets/images/welcome-logo-border.png" class="d-block" alt="Logo border">
                     </div>
                 </div>
@@ -65,11 +63,11 @@
         <div class="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
             <div class="sundarkand-text">
                 <div class="welcome-title"> 
-                    About Sundarkand 
+                    {{ "home.about_sundarkand_title" | translate }} 
                 </div>
                 <img src="assets/images/welcome-logo-border.png" class="d-block mx-auto my-2" alt="Logo border">
                 <div class="welcome-description">
-                    {{ "home.brief_about_sundarkand" | translate }}
+                    {{ "home.about_sundarkand" | translate }}
                 </div>
             </div>
         </div>
@@ -83,14 +81,14 @@
                 </div>
                 <div class="card-text">
                     <div class="card-title">
-                        Online Donation
+                        {{ "home.donation_box.title" | translate }} 
                     </div>
                     <div class="card-subtitle">
-                        We are now accepting online donations
+                        {{ "home.donation_box.description" | translate }} 
                     </div>
                 </div>
                 <div class="card-action">
-                    <a routerLink="/donation"> Go to Donation Page </a>
+                    <a routerLink="/donation"> {{ "home.donation_box.button" | translate }}  </a>
                 </div>
             </div>
         </div>
@@ -101,15 +99,15 @@
                 </div>
                 <div class="card-text">
                     <div class="card-subtitle">
-                        Shree Godadiyabapa Ramwadi Aashram
+                        {{ "home.prasadam_box.description" | translate }}
                     </div>
                     <div class="card-title">
-                        Annakshetra
+                        {{ "home.prasadam_box.title" | translate }} 
                     </div>
                 </div>
                 <div class="card-action">
                     <!-- <a routerLink="/about" fragment="id3"> More Details </a> -->
-                    <a routerLink="/about"> More Details </a>
+                    <a routerLink="/about"> {{ "home.prasadam_box.button" | translate }} </a>
                 </div>
             </div>
         </div>
@@ -120,14 +118,14 @@
                 </div>
                 <div class="card-text">
                     <div class="card-subtitle">
-                        Shree Godadiyabapa Yuvak Mandal
+                        {{ "home.sundarkand_box.description" | translate }}
                     </div>
                     <div class="card-title">
-                        Sundarkand Group 
+                        {{ "home.sundarkand_box.title" | translate }} 
                     </div>
                 </div>
                 <div class="card-action">
-                    <a routerLink="/contact"> Register Now </a>
+                    <a routerLink="/contact"> {{ "home.sundarkand_box.button" | translate }} </a>
                 </div>
             </div>
         </div>
