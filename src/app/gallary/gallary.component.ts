@@ -14,7 +14,7 @@ export class GallaryComponent implements OnInit {
     { category: 'temples', totalImg: 6 },
     { category: 'founder-guru', totalImg: 7 },
     { category: 'sundarkand', totalImg: 4 },
-    { category: 'events', totalImg: 4 }
+    { category: 'events', totalImg: 1 }
   ];
 
   imgList: string[] = [];
