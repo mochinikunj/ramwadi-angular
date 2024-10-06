@@ -3,20 +3,17 @@ import { HeaderService } from '../service/header/header.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-
   public selectedLanguage = 'en';
   public appLanguages = [
     { title: 'English', code: 'en' },
     { title: 'हिन्दी', code: 'hi' },
-    { title: 'ગુજરાતી', code: 'gu' }
+    { title: 'ગુજરાતી', code: 'gu' },
   ];
 
-  constructor(
-    private header: HeaderService
-  ) { }
+  constructor(private header: HeaderService) {}
 
   ngOnInit(): void {
     this.header.languageChange.subscribe((language) => {

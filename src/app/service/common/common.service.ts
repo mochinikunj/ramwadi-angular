@@ -4,13 +4,10 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommonService {
-  
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
   saveContactUsForm(request: object): Observable<object> {
     const endPoint = `${environment.nodeUrl}/api/saveContactUsForm`;

@@ -11,50 +11,51 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'gallery',
-    component: GallaryComponent
+    component: GallaryComponent,
   },
   {
     path: 'events',
-    component: EventsComponent
+    component: EventsComponent,
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
   },
   {
     path: 'login',
-    component: LogInComponent
+    component: LogInComponent,
   },
-  { 
-    path: 'donation', 
-    loadChildren: () => import('./donation/donation.module').then(m => m.DonationModule) 
+  {
+    path: 'donation',
+    loadChildren: () =>
+      import('./donation/donation.module').then((m) => m.DonationModule),
   },
   {
     path: '404',
-    component: PageNotFoundComponent
+    component: PageNotFoundComponent,
   },
   {
     path: '**',
-    redirectTo: '404'
-  }
+    redirectTo: '404',
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { 
-      useHash: true, 
+    RouterModule.forRoot(routes, {
+      useHash: true,
       scrollPositionRestoration: 'enabled',
-      anchorScrolling: 'enabled'
-    })
+      anchorScrolling: 'enabled',
+    }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,64 +1,125 @@
 <div class="gallary-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <ul class="gallary-title-container">
-                    <li [class.active-route]="selectedCategory === 'all'" (click)="getPhotoes('all')" (keyboard.enter)="getPhotoes('all')"> 
-                        {{ "gallery.categories.all" | translate }} 
-                    </li>
-                    <li [class.active-route]="selectedCategory === 'temples'" (click)="getPhotoes('temples')" (keyboard.enter)="getPhotoes('temples')"> 
-                        {{ "gallery.categories.temples" | translate }} 
-                    </li>
-                    <li [class.active-route]="selectedCategory === 'founder-guru'" (click)="getPhotoes('founder-guru')" (keyboard.enter)="getPhotoes('founder-guru')"> 
-                        {{ "gallery.categories.founder" | translate }} 
-                    </li>
-                    <li [class.active-route]="selectedCategory === 'sundarkand'" (click)="getPhotoes('sundarkand')" (keyboard.enter)="getPhotoes('sundarkand')"> 
-                        {{ "gallery.categories.sundarkand" | translate }} 
-                    </li>
-                    <li [class.active-route]="selectedCategory === 'events'" (click)="getPhotoes('events')" (keyboard.enter)="getPhotoes('events')"> 
-                        {{ "gallery.categories.events" | translate }} 
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ul class="gallary-title-container">
+          <li
+            [class.active-route]="selectedCategory === 'all'"
+            (click)="getPhotoes('all')"
+            (keyboard.enter)="getPhotoes('all')"
+          >
+            {{ 'gallery.categories.all' | translate }}
+          </li>
+          <li
+            [class.active-route]="selectedCategory === 'temples'"
+            (click)="getPhotoes('temples')"
+            (keyboard.enter)="getPhotoes('temples')"
+          >
+            {{ 'gallery.categories.temples' | translate }}
+          </li>
+          <li
+            [class.active-route]="selectedCategory === 'founder-guru'"
+            (click)="getPhotoes('founder-guru')"
+            (keyboard.enter)="getPhotoes('founder-guru')"
+          >
+            {{ 'gallery.categories.founder' | translate }}
+          </li>
+          <li
+            [class.active-route]="selectedCategory === 'sundarkand'"
+            (click)="getPhotoes('sundarkand')"
+            (keyboard.enter)="getPhotoes('sundarkand')"
+          >
+            {{ 'gallery.categories.sundarkand' | translate }}
+          </li>
+          <li
+            [class.active-route]="selectedCategory === 'events'"
+            (click)="getPhotoes('events')"
+            (keyboard.enter)="getPhotoes('events')"
+          >
+            {{ 'gallery.categories.events' | translate }}
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container my-4">
-    <div class="row">
-        <div class="col-12">
-            <div class="image-list-container">
-                <div class="image-container" *ngFor="let img of imgList; let i = index;" (click)="selectedImgIndex = i;">
-                    <img class="image" [src]="img" [alt]="'Image' + (i + 1)" loading="lazy" data-bs-toggle="modal" data-bs-target="#myLargeModal" loading="lazy">
-                    <img class="zoom" src="assets/images/zoom.png" alt="Zoom" loading="lazy">
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="image-list-container">
+        <div
+          class="image-container"
+          *ngFor="let img of imgList; let i = index"
+          (click)="selectedImgIndex = i"
+        >
+          <img
+            class="image"
+            [src]="img"
+            [alt]="'Image' + (i + 1)"
+            loading="lazy"
+            data-bs-toggle="modal"
+            data-bs-target="#myLargeModal"
+            loading="lazy"
+          />
+          <img
+            class="zoom"
+            src="assets/images/zoom.png"
+            alt="Zoom"
+            loading="lazy"
+          />
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- Bootstrap modal to maximize image -->
-<div class="modal fade" id="myLargeModal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="modal-header">
-                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img class="single-img" [src]="imgList[selectedImgIndex]" [alt]="'Image' + (selectedImgIndex + 1)" loading="lazy">
-                <div class="navigation-container">
-                    <button class="prev-container carousel-control-prev" (click)="goToPrevImg()">
-                        <span class="prev carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="next-container carousel-control-next" (click)="goToNextImg()">
-                        <span class="next carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-            <!-- <div class="modal-footer justify-content-start">
+<div
+  class="modal fade"
+  id="myLargeModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="true"
+  tabindex="-1"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <img
+          class="single-img"
+          [src]="imgList[selectedImgIndex]"
+          [alt]="'Image' + (selectedImgIndex + 1)"
+          loading="lazy"
+        />
+        <div class="navigation-container">
+          <button
+            class="prev-container carousel-control-prev"
+            (click)="goToPrevImg()"
+          >
+            <span class="prev carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="next-container carousel-control-next"
+            (click)="goToNextImg()"
+          >
+            <span class="next carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+      <!-- <div class="modal-footer justify-content-start">
                 SitaRam
             </div> -->
-        </div>
     </div>
+  </div>
 </div>

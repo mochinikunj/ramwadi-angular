@@ -1,137 +1,280 @@
 <div class="contact-page py-3 py-lg-4">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="contact-box p-3">
+          <div class="row">
             <div class="col-12">
-                <div class="contact-box p-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="contact-form-header">
-                                <img src="assets/images/welcome-logo.png" class="center-img d-block" alt="Welcome to Ramwadi">
-                                <div class="form-title"> {{ "contact.page_title" | translate }} </div>
-                                <img src="assets/images/welcome-logo-border.png" class="center-img d-block" alt="Logo border">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row my-2">
-                        <div class="col-12 col-md-5">
-                            <div class="temple-contact">
-                                <div class="form-description mb-2">
-                                    {{ "contact.address_title" | translate }}
-                                </div>
-                                <div class="temple-name">
-                                    {{ "contact.aashram_name" | translate }}
-                                </div>
-                                <div class="temple-address mb-2">
-                                    {{ "contact.address" | translate }}
-                                </div>
-                                <div class="contact-details">
-                                    <strong> {{ "contact.mobile_label" | translate }}: </strong> 
-                                    <a href="tel:{{ 'contact.mobile' | translate }}" target="_blank"> +91 {{ "contact.mobile" | translate }} </a> <br>
-                                    
-                                    <strong> {{ "contact.website_label" | translate }}: </strong> 
-                                    <a href="{{ 'contact.website' | translate }}" target="_blank"> {{ ("contact.website" | translate).slice(8) }} </a> <br>
-                                    
-                                    <strong> {{ "contact.email_label" | translate }}: </strong> 
-                                    <a href="mailto:{{ 'contact.email' | translate }}" target="_blank"> {{ "contact.email" | translate }} </a>
-                                </div>
-                            </div>
-                            <!-- <div class="location-container"></div> -->
-                        </div>
-                        <div class="col-12 col-md-7 mt-4 mt-md-0">
-                            <div class="contact-form-container">                         
-                                <div class="form-description mb-2">
-                                    {{ "contact.form.title" | translate }}
-                                </div>
-                                <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                                    <input type="text" id="name" name="name" formControlName="name" placeholder="{{ 'contact.form.placeholder.name' | translate }}" title="{{ 'contact.form.placeholder.name' | translate }}" autocomplete="nope">
-                                    <div *ngIf="getControl('name')?.invalid && (getControl('name')?.dirty || getControl('name')?.touched)" class="validation-error">
-                                        <div *ngIf="getControl('name')?.errors?.['required']">
-                                            {{ "contact.form.errors.name.required" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('name')?.errors?.['minlength']">
-                                            {{ "contact.form.errors.name.min_length" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('name')?.errors?.['maxlength']">
-                                            {{ "contact.form.errors.name.max_length" | translate }}
-                                        </div>
-                                    </div>
-
-                                    <input type="email" id="email" name="email" formControlName="email" placeholder="{{ 'contact.form.placeholder.email' | translate }}" title="{{ 'contact.form.placeholder.email' | translate }}" autocomplete="nope">
-                                    <div *ngIf="getControl('email')?.invalid && (getControl('email')?.dirty || getControl('email')?.touched)" class="validation-error">
-                                        <div *ngIf="getControl('email')?.errors?.['required']">
-                                            {{ "contact.form.errors.email.required" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('email')?.errors?.['minlength']">
-                                            {{ "contact.form.errors.email.min_length" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('email')?.errors?.['maxlength']">
-                                            {{ "contact.form.errors.email.max_length" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('email')?.errors?.['email']">
-                                            {{ "contact.form.errors.email.format" | translate }}
-                                        </div>
-                                    </div>
-                                    
-                                    <input type="tel" id="contactNumber" name="contactNumber" formControlName="contactNumber" placeholder="{{ 'contact.form.placeholder.contact' | translate }}" title="{{ 'contact.form.placeholder.contact' | translate }}" autocomplete="nope">
-                                    <div *ngIf="getControl('contactNumber')?.invalid && (getControl('contactNumber')?.dirty || getControl('contactNumber')?.touched)" class="validation-error">
-                                        <div *ngIf="getControl('contactNumber')?.errors?.['required']">
-                                            {{ "contact.form.errors.contact.required" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('contactNumber')?.errors?.['minlength']">
-                                            {{ "contact.form.errors.contact.min_length" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('contactNumber')?.errors?.['maxlength']">
-                                            {{ "contact.form.errors.contact.max_length" | translate }}
-                                        </div>
-                                    </div>
-
-                                    <input type="text" id="subject" name="subject" formControlName="subject" placeholder="{{ 'contact.form.placeholder.subject' | translate }}" title="{{ 'contact.form.placeholder.subject' | translate }}" autocomplete="nope">
-                                    <div *ngIf="getControl('subject')?.invalid && (getControl('subject')?.dirty || getControl('subject')?.touched)" class="validation-error">
-                                        <div *ngIf="getControl('subject')?.errors?.['required']">
-                                            {{ "contact.form.errors.subject.required" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('subject')?.errors?.['minlength']">
-                                            {{ "contact.form.errors.subject.min_length" | translate }}
-                                         </div>
-                                        <div *ngIf="getControl('subject')?.errors?.['maxlength']">
-                                            {{ "contact.form.errors.subject.max_length" | translate }}
-                                        </div>
-                                    </div>
-                                    
-                                    <textarea id="message" name="message" formControlName="message" placeholder="{{ 'contact.form.placeholder.message' | translate }}" title="{{ 'contact.form.placeholder.message' | translate }}" rows="5" maxlength="2000"></textarea>
-                                    <div *ngIf="getControl('message')?.invalid && (getControl('message')?.dirty || getControl('message')?.touched)" class="validation-error">
-                                        <div *ngIf="getControl('message')?.errors?.['required']">
-                                            {{ "contact.form.errors.message.required" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('message')?.errors?.['minlength']">
-                                            {{ "contact.form.errors.message.min_length" | translate }}
-                                        </div>
-                                        <div *ngIf="getControl('message')?.errors?.['maxlength']">
-                                            {{ "contact.form.errors.message.max_length" | translate }}
-                                        </div>
-                                    </div>
-
-                                    <div class="google-capcha-container">
-                                        <ngx-recaptcha2 #recaptcha id="recaptcha" [siteKey]="siteKey" formControlName="recaptcha"></ngx-recaptcha2>
-                                    </div>
-                                    <div *ngIf="getControl('recaptcha')?.invalid && (getControl('recaptcha')?.dirty || getControl('recaptcha')?.touched)" class="validation-error">
-                                        <div *ngIf="getControl('recaptcha')?.errors?.['required']">
-                                            {{ "contact.form.errors.captcha.required" | translate }}
-                                        </div>
-                                    </div>
-
-                                    <button id="contact-form-submit" type="submit" [class.enabled]="contactForm.valid" [disabled]="!contactForm.valid"> {{ "contact.form.submit" | translate }} </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row my-2">
-                        <div class="col-12">
-                            <iframe class="google-location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4553.000272993211!2d73.1198014221882!3d22.04245447331073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395feb140fca6cf3%3A0x5bf357930d0eb23c!2sShree%20Premdasbapa%20Godadiya%20Ashram%20%7C%20Ramvadi!5e0!3m2!1sen!2sin!4v1653049873667!5m2!1sen!2sin" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+              <div class="contact-form-header">
+                <img
+                  src="assets/images/welcome-logo.png"
+                  class="center-img d-block"
+                  alt="Welcome to Ramwadi"
+                />
+                <div class="form-title">
+                  {{ 'contact.page_title' | translate }}
                 </div>
+                <img
+                  src="assets/images/welcome-logo-border.png"
+                  class="center-img d-block"
+                  alt="Logo border"
+                />
+              </div>
             </div>
+          </div>
+          <div class="row my-2">
+            <div class="col-12 col-md-5">
+              <div class="temple-contact">
+                <div class="form-description mb-2">
+                  {{ 'contact.address_title' | translate }}
+                </div>
+                <div class="temple-name">
+                  {{ 'contact.aashram_name' | translate }}
+                </div>
+                <div class="temple-address mb-2">
+                  {{ 'contact.address' | translate }}
+                </div>
+                <div class="contact-details">
+                  <strong> {{ 'contact.mobile_label' | translate }}: </strong>
+                  <a
+                    href="tel:{{ 'contact.mobile' | translate }}"
+                    target="_blank"
+                  >
+                    +91 {{ 'contact.mobile' | translate }}
+                  </a>
+                  <br />
+
+                  <strong> {{ 'contact.website_label' | translate }}: </strong>
+                  <a href="{{ 'contact.website' | translate }}" target="_blank">
+                    {{ ('contact.website' | translate).slice(8) }}
+                  </a>
+                  <br />
+
+                  <strong> {{ 'contact.email_label' | translate }}: </strong>
+                  <a
+                    href="mailto:{{ 'contact.email' | translate }}"
+                    target="_blank"
+                  >
+                    {{ 'contact.email' | translate }}
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="location-container"></div> -->
+            </div>
+            <div class="col-12 col-md-7 mt-4 mt-md-0">
+              <div class="contact-form-container">
+                <div class="form-description mb-2">
+                  {{ 'contact.form.title' | translate }}
+                </div>
+                <form
+                  class="contact-form"
+                  [formGroup]="contactForm"
+                  (ngSubmit)="onSubmit()"
+                >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    formControlName="name"
+                    placeholder="{{
+                      'contact.form.placeholder.name' | translate
+                    }}"
+                    title="{{ 'contact.form.placeholder.name' | translate }}"
+                    autocomplete="nope"
+                  />
+                  <div
+                    *ngIf="
+                      getControl('name')?.invalid &&
+                      (getControl('name')?.dirty || getControl('name')?.touched)
+                    "
+                    class="validation-error"
+                  >
+                    <div *ngIf="getControl('name')?.errors?.['required']">
+                      {{ 'contact.form.errors.name.required' | translate }}
+                    </div>
+                    <div *ngIf="getControl('name')?.errors?.['minlength']">
+                      {{ 'contact.form.errors.name.min_length' | translate }}
+                    </div>
+                    <div *ngIf="getControl('name')?.errors?.['maxlength']">
+                      {{ 'contact.form.errors.name.max_length' | translate }}
+                    </div>
+                  </div>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    formControlName="email"
+                    placeholder="{{
+                      'contact.form.placeholder.email' | translate
+                    }}"
+                    title="{{ 'contact.form.placeholder.email' | translate }}"
+                    autocomplete="nope"
+                  />
+                  <div
+                    *ngIf="
+                      getControl('email')?.invalid &&
+                      (getControl('email')?.dirty ||
+                        getControl('email')?.touched)
+                    "
+                    class="validation-error"
+                  >
+                    <div *ngIf="getControl('email')?.errors?.['required']">
+                      {{ 'contact.form.errors.email.required' | translate }}
+                    </div>
+                    <div *ngIf="getControl('email')?.errors?.['minlength']">
+                      {{ 'contact.form.errors.email.min_length' | translate }}
+                    </div>
+                    <div *ngIf="getControl('email')?.errors?.['maxlength']">
+                      {{ 'contact.form.errors.email.max_length' | translate }}
+                    </div>
+                    <div *ngIf="getControl('email')?.errors?.['email']">
+                      {{ 'contact.form.errors.email.format' | translate }}
+                    </div>
+                  </div>
+
+                  <input
+                    type="tel"
+                    id="contactNumber"
+                    name="contactNumber"
+                    formControlName="contactNumber"
+                    placeholder="{{
+                      'contact.form.placeholder.contact' | translate
+                    }}"
+                    title="{{ 'contact.form.placeholder.contact' | translate }}"
+                    autocomplete="nope"
+                  />
+                  <div
+                    *ngIf="
+                      getControl('contactNumber')?.invalid &&
+                      (getControl('contactNumber')?.dirty ||
+                        getControl('contactNumber')?.touched)
+                    "
+                    class="validation-error"
+                  >
+                    <div
+                      *ngIf="getControl('contactNumber')?.errors?.['required']"
+                    >
+                      {{ 'contact.form.errors.contact.required' | translate }}
+                    </div>
+                    <div
+                      *ngIf="getControl('contactNumber')?.errors?.['minlength']"
+                    >
+                      {{ 'contact.form.errors.contact.min_length' | translate }}
+                    </div>
+                    <div
+                      *ngIf="getControl('contactNumber')?.errors?.['maxlength']"
+                    >
+                      {{ 'contact.form.errors.contact.max_length' | translate }}
+                    </div>
+                  </div>
+
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    formControlName="subject"
+                    placeholder="{{
+                      'contact.form.placeholder.subject' | translate
+                    }}"
+                    title="{{ 'contact.form.placeholder.subject' | translate }}"
+                    autocomplete="nope"
+                  />
+                  <div
+                    *ngIf="
+                      getControl('subject')?.invalid &&
+                      (getControl('subject')?.dirty ||
+                        getControl('subject')?.touched)
+                    "
+                    class="validation-error"
+                  >
+                    <div *ngIf="getControl('subject')?.errors?.['required']">
+                      {{ 'contact.form.errors.subject.required' | translate }}
+                    </div>
+                    <div *ngIf="getControl('subject')?.errors?.['minlength']">
+                      {{ 'contact.form.errors.subject.min_length' | translate }}
+                    </div>
+                    <div *ngIf="getControl('subject')?.errors?.['maxlength']">
+                      {{ 'contact.form.errors.subject.max_length' | translate }}
+                    </div>
+                  </div>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    formControlName="message"
+                    placeholder="{{
+                      'contact.form.placeholder.message' | translate
+                    }}"
+                    title="{{ 'contact.form.placeholder.message' | translate }}"
+                    rows="5"
+                    maxlength="2000"
+                  ></textarea>
+                  <div
+                    *ngIf="
+                      getControl('message')?.invalid &&
+                      (getControl('message')?.dirty ||
+                        getControl('message')?.touched)
+                    "
+                    class="validation-error"
+                  >
+                    <div *ngIf="getControl('message')?.errors?.['required']">
+                      {{ 'contact.form.errors.message.required' | translate }}
+                    </div>
+                    <div *ngIf="getControl('message')?.errors?.['minlength']">
+                      {{ 'contact.form.errors.message.min_length' | translate }}
+                    </div>
+                    <div *ngIf="getControl('message')?.errors?.['maxlength']">
+                      {{ 'contact.form.errors.message.max_length' | translate }}
+                    </div>
+                  </div>
+
+                  <div class="google-capcha-container">
+                    <ngx-recaptcha2
+                      #recaptcha
+                      id="recaptcha"
+                      [siteKey]="siteKey"
+                      formControlName="recaptcha"
+                    ></ngx-recaptcha2>
+                  </div>
+                  <div
+                    *ngIf="
+                      getControl('recaptcha')?.invalid &&
+                      (getControl('recaptcha')?.dirty ||
+                        getControl('recaptcha')?.touched)
+                    "
+                    class="validation-error"
+                  >
+                    <div *ngIf="getControl('recaptcha')?.errors?.['required']">
+                      {{ 'contact.form.errors.captcha.required' | translate }}
+                    </div>
+                  </div>
+
+                  <button
+                    id="contact-form-submit"
+                    type="submit"
+                    [class.enabled]="contactForm.valid"
+                    [disabled]="!contactForm.valid"
+                  >
+                    {{ 'contact.form.submit' | translate }}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row my-2">
+            <div class="col-12">
+              <iframe
+                class="google-location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4553.000272993211!2d73.1198014221882!3d22.04245447331073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395feb140fca6cf3%3A0x5bf357930d0eb23c!2sShree%20Premdasbapa%20Godadiya%20Ashram%20%7C%20Ramvadi!5e0!3m2!1sen!2sin!4v1653049873667!5m2!1sen!2sin"
+                allowfullscreen="true"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

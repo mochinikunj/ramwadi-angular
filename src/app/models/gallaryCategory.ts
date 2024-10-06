@@ -1,4 +1,4 @@
 export interface GallaryCategory {
-    category: string,
-    totalImg: number
+  category: string;
+  totalImg: number;
 }

@@ -4,23 +4,22 @@ import { GallaryCategory } from '../models/gallaryCategory';
 @Component({
   selector: 'app-gallary',
   templateUrl: './gallary.component.html',
-  styleUrls: ['./gallary.component.css']
+  styleUrls: ['./gallary.component.css'],
 })
 export class GallaryComponent implements OnInit {
-
   selectedCategory = 'all';
 
   imgCategoryArray: GallaryCategory[] = [
     { category: 'temples', totalImg: 6 },
     { category: 'founder-guru', totalImg: 7 },
     { category: 'sundarkand', totalImg: 4 },
-    { category: 'events', totalImg: 1 }
+    { category: 'events', totalImg: 1 },
   ];
 
   imgList: string[] = [];
   selectedImgIndex = 0;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.getPhotoes(this.selectedCategory);
@@ -35,8 +34,11 @@ export class GallaryComponent implements OnInit {
     this.imgList = [];
     this.imgCategoryArray.forEach((category) => {
       const categoryName = category.category;
-      if (this.selectedCategory === 'all' || this.selectedCategory === categoryName) {
-        for (let i=1; i<=category.totalImg; i++) {
+      if (
+        this.selectedCategory === 'all' ||
+        this.selectedCategory === categoryName
+      ) {
+        for (let i = 1; i <= category.totalImg; i++) {
           const imgPath = `assets/images/gallary/${categoryName}/${categoryName} (${i}).jpg`;
           this.imgList.push(imgPath);
         }

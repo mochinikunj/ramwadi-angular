@@ -1,56 +1,56 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 /********** custom scrollbar css *************/
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+  width: 5px;
+  height: 5px;
 }
-   
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #E97000;
-    height: 40vh;
-    width: 40vw;
+  background: #e97000;
+  height: 40vh;
+  width: 40vw;
 }
 
 /********** image slider custom controller css  **********/
 .carousel-dark .carousel-indicators .active {
-    background-color: #E97000;
+  background-color: #e97000;
 }
 
-.carousel-dark .carousel-control-next-icon, 
+.carousel-dark .carousel-control-next-icon,
 .carousel-dark .carousel-control-prev-icon {
-    filter: none;
+  filter: none;
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E97000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E97000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E97000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E97000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
 
 /********** overwrite bootstrap css *************/
 ul {
-    padding-left: 0;
-    margin-bottom: 0;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 /********** global styles *************/
 .active-route {
-    color: #E97000 !important;
-    cursor: auto !important;
-    pointer-events: none !important;
+  color: #e97000 !important;
+  cursor: auto !important;
+  pointer-events: none !important;
 }

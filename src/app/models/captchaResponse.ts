@@ -1,4 +1,4 @@
 export interface CaptchaResponse {
-    success?: boolean,
-    error?: boolean
+  success?: boolean;
+  error?: boolean;
 }

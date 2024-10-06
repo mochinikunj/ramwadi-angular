@@ -1,39 +1,59 @@
 <div class="header-box">
-    <div class="col-7 col-md-3">
-        <div class="logo">
-            <a class="d-inline-block h-100 mw-100" routerLink="/">
-                <img src="assets/images/logo.png" alt="SitaRam">
-            </a>
-        </div>
+  <div class="col-7 col-md-3">
+    <div class="logo">
+      <a class="d-inline-block h-100 mw-100" routerLink="/">
+        <img src="assets/images/logo.png" alt="SitaRam" />
+      </a>
     </div>
-    <div class="col-md-7 d-none d-md-block">
-        <ul class="navigation-menu">
-            <li>
-                <a routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                    {{ "header.home" | translate }} 
-                </a>
-            </li>
-            <li>
-                <a routerLink="/gallery" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                    {{ "header.gallery" | translate }} 
-                </a>
-            </li>
-            <li>
-                <a routerLink="/events" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                    {{ "header.events" | translate }} 
-                </a>
-            </li>
-            <li>
-                <a routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                    {{ "header.about" | translate }} 
-                </a>
-            </li>
-            <li>
-                <a routerLink="/contact" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                    {{ "header.contact" | translate }} 
-                </a>
-            </li>
-            <!-- <li class="dropdown">
+  </div>
+  <div class="col-md-7 d-none d-md-block">
+    <ul class="navigation-menu">
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active-route"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ 'header.home' | translate }}
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/gallery"
+          routerLinkActive="active-route"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ 'header.gallery' | translate }}
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/events"
+          routerLinkActive="active-route"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ 'header.events' | translate }}
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="active-route"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ 'header.about' | translate }}
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/contact"
+          routerLinkActive="active-route"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ 'header.contact' | translate }}
+        </a>
+      </li>
+      <!-- <li class="dropdown">
                 <button class="dropdown-toggle more" type="button" id="dropdownMenuMoreButton" 
                 data-bs-toggle="dropdown" aria-expanded="false">
                     More
@@ -55,61 +75,94 @@
                     <li><a class="dropdown-item" href="#"> Logout </a></li>
                 </ul>
             </li> -->
-        </ul>
-    </div>
-    <div class="col-5 col-md-2">
-        <div class="right-side-menu">
-            <div class="dropdown">
-                <button class="dropdown-toggle menu-bar-container d-md-none" type="button" 
-                id="dropdownMobileMenuButton" title="Menu" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMobileMenuButton">
-                    <li>
-                        <a class="dropdown-item" routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                            {{ "header.home" | translate }} 
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="/gallery" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                            {{ "header.gallery" | translate }} 
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="/events" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                            {{ "header.events" | translate }} 
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                            {{ "header.about" | translate }} 
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="/contact" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}"> 
-                            {{ "header.contact" | translate }} 
-                        </a>
-                    </li>
-                    <!-- <li><a class="dropdown-item" routerLink="/"> More </a></li>
+    </ul>
+  </div>
+  <div class="col-5 col-md-2">
+    <div class="right-side-menu">
+      <div class="dropdown">
+        <button
+          class="dropdown-toggle menu-bar-container d-md-none"
+          type="button"
+          id="dropdownMobileMenuButton"
+          title="Menu"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMobileMenuButton">
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/"
+              routerLinkActive="active-route"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ 'header.home' | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/gallery"
+              routerLinkActive="active-route"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ 'header.gallery' | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/events"
+              routerLinkActive="active-route"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ 'header.events' | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/about"
+              routerLinkActive="active-route"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ 'header.about' | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/contact"
+              routerLinkActive="active-route"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ 'header.contact' | translate }}
+            </a>
+          </li>
+          <!-- <li><a class="dropdown-item" routerLink="/"> More </a></li>
                     <li><a class="dropdown-item" routerLink="/login"> Login </a></li>
                     <ng-container>
                         <li><a class="dropdown-item" routerLink="/"> Profile </a></li>
                         <li><a class="dropdown-item" routerLink="/"> Logout </a></li>
                     </ng-container> -->
-                </ul>
-            </div>
-            <div class="language-container">
-                <select name="language" id="language" class="language-dropdown"
-                    [title]="'language' | translate"
-                    [(ngModel)]="selectedLanguage"
-                    (change)="changeLanguage($event)"
-                >
-                    <option *ngFor="let language of appLanguages" [value]="language.code"> 
-                        {{ language.title }} 
-                    </option>
-                </select>
-            </div>
-        </div>
+        </ul>
+      </div>
+      <div class="language-container">
+        <select
+          name="language"
+          id="language"
+          class="language-dropdown"
+          [title]="'language' | translate"
+          [(ngModel)]="selectedLanguage"
+          (change)="changeLanguage($event)"
+        >
+          <option *ngFor="let language of appLanguages" [value]="language.code">
+            {{ language.title }}
+          </option>
+        </select>
+      </div>
     </div>
+  </div>
 </div>

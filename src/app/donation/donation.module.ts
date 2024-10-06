@@ -6,20 +6,14 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { DonationRoutingModule } from './donation-routing.module';
 import { DonationComponent } from './donation.component';
 
-
 @NgModule({
-  declarations: [
-    DonationComponent
-  ],
-  imports: [
-    CommonModule,
-    DonationRoutingModule
-  ],
+  declarations: [DonationComponent],
+  imports: [CommonModule, DonationRoutingModule],
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    }
-  ]
+      useClass: HashLocationStrategy,
+    },
+  ],
 })
-export class DonationModule { }
+export class DonationModule {}

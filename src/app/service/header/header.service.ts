@@ -4,17 +4,18 @@ import { BehaviorSubject } from 'rxjs';
 import { Language } from '../../models/languages';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeaderService {
+  private appLanguages: Language['appLanguage'][] = ['en', 'hi', 'gu'];
+  private userLanguage =
+    localStorage.getItem('lang') || navigator.language.slice(0, 2);
 
-  private appLanguages: Language['appLanguage'][] = [ 'en', 'hi', 'gu' ];
-  private userLanguage = localStorage.getItem('lang') || navigator.language.slice(0, 2);
-
-  constructor(
-    private translate: TranslateService
-  ) {
-    if (this.userLanguage && this.appLanguages.includes(this.userLanguage as Language['appLanguage'])) {
+  constructor(private translate: TranslateService) {
+    if (
+      this.userLanguage &&
+      this.appLanguages.includes(this.userLanguage as Language['appLanguage'])
+    ) {
       this.changeLanguage(this.userLanguage);
     }
   }
