@@ -13,10 +13,7 @@ export class ContactComponent implements OnInit {
   siteKey = environment.reCaptchaSiteKey;
   @ViewChild('recaptcha') captchaElem: ReCaptcha2Component | undefined;
 
-  constructor(
-    private fb: FormBuilder,
-    private common: CommonService,
-  ) {}
+  constructor(private fb: FormBuilder, private common: CommonService) {}
 
   ngOnInit(): void {}
 
@@ -68,19 +65,19 @@ export class ContactComponent implements OnInit {
   }
 
   submitFormToBackend(request: object): void {
-    this.common.saveContactUsForm(request).subscribe(
-      (response: any) => {
+    this.common.saveContactUsForm(request).subscribe({
+      next: (response: any) => {
         if (response && response.code === 200 && response.status === 'OK') {
           alert('Form Submitted Successfully!');
           this.resetContactForm();
         }
       },
-      (err) => {
+      error: (err) => {
         const msg =
           'There are some technical problems, please continue after sometime!';
         alert(msg);
       },
-    );
+    });
   }
 
   resetContactForm(): void {
