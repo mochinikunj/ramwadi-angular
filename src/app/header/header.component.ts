@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../service/header/header.service';
+import { CommonService } from '../service/common/common.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,9 +15,15 @@ export class HeaderComponent implements OnInit {
     { title: 'ગુજરાતી', code: 'gu' },
   ];
 
-  constructor(private header: HeaderService) {}
+  constructor(private common: CommonService, private header: HeaderService) {}
 
   ngOnInit(): void {
+    this.common.healthCheck().subscribe((response: any) => {
+      if (response && response.code === 200 && response.status === 'OK') {
+        console.log('Backend is up and running...');
+      }
+    });
+
     this.header.languageChange.subscribe((language) => {
       if (language) {
         this.selectedLanguage = language;
