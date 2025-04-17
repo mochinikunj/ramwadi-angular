@@ -1,100 +1,132 @@
 {
-    "title": "Ramwadi",
-    "sitaram": "SitaRam",
-    "header": {
-        "home": "Home",
-        "gallery": "Gallery",
-        "events": "Events",
-        "about": "About",
-        "contact": "Contact"
+  "title": "Ramwadi",
+  "sitaram": "SitaRam",
+  "header": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "events": "Events",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "about_temple_title": "Welcome to Shree Premdasbapa Godadiya Ramwadi Aashram",
+    "about_temple": "This Hanumanji temple is considered most holy and sacred and It is among the most prominent ones in the Godadiya Parampara. The temple place was mere a jungle at the times when Samarth Shree Premdasbapa came here. They started their Spiritual practices and Bhajan Sankirtan at this place. The image of this temple is so powerful that mere darshan of this temple halps you to gain Peace of mind, Happiness, Joyfulness and helps to fulfill whishes and gives immense positivity.",
+    "about_sundarkand_title": "About Sundarkand",
+    "about_sundarkand": "The original Sundara Kanda is in Sanskrit and was composed by Valmiki, who was the first to scripturally record the Ramayana. Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman. The work depicts the adventures of Hanuman and his selflessness, strength, and devotion to Rama are emphasized in the text. Hanuman was fondly called “Sundara” by his mother Anjani and Sage Valmiki chose this name over others as the Sundara Kanda is about Hanuman's journey to Lanka.",
+    "know_more": "Know more",
+    "donation_box": {
+      "title": "Online Donation",
+      "description": "We are now accepting online donations",
+      "button": "Go to Donation Page"
     },
-    "home": {
-        "about_temple_title": "Welcome to Shree Premdasbapa Godadiya Ramwadi Aashram",
-        "about_temple": "This Hanumanji temple is considered most holy and sacred and It is among the most prominent ones in the Godadiya Parampara. The temple place was mere a jungle at the times when Samarth Shree Premdasbapa came here. They started their Spiritual practices and Bhajan Sankirtan at this place. The image of this temple is so powerful that mere darshan of this temple halps you to gain Peace of mind, Happiness, Joyfulness and helps to fulfill whishes and gives immense positivity.",
-        "about_sundarkand_title": "About Sundarkand",
-        "about_sundarkand": "The original Sundara Kanda is in Sanskrit and was composed by Valmiki, who was the first to scripturally record the Ramayana. Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman. The work depicts the adventures of Hanuman and his selflessness, strength, and devotion to Rama are emphasized in the text. Hanuman was fondly called “Sundara” by his mother Anjani and Sage Valmiki chose this name over others as the Sundara Kanda is about Hanuman's journey to Lanka.",
-        "know_more": "Know more",
-        "donation_box": {
-            "title": "Online Donation",
-            "description": "We are now accepting online donations",
-            "button": "Go to Donation Page"
-        },
-        "prasadam_box": {
-            "title": "Annakshetra",
-            "description": "Shree Premdasbapa Godadiya Ramwadi Aashram",
-            "button": "More Details"
-        },
-        "sundarkand_box": {
-            "title": "Sundarkand Group",
-            "description": "Shree Godadiyabapa Yuvak Mandal",
-            "button": "Register Now"
-        }
+    "prasadam_box": {
+      "title": "Annakshetra",
+      "description": "Shree Premdasbapa Godadiya Ramwadi Aashram",
+      "button": "More Details"
     },
-    "gallery" : {
-        "categories": {
-            "all": "All",
-            "temples": "Temples",
-            "founder": "Founder/Guru",
-            "sundarkand": "Sundarkand",
-            "events": "Events"
-        }
-    },
-    "contact": {
-        "page_title": "Contact us",
-        "aashram_name": "Shree Premdasbapa Godadiya Ramwadi Aashram",
-        "address_title": "Jay SiyaRam",
-        "address": "Near railway, Old gas godown, Nava bazar, Karjan, Vadodara, Gujarat, 391240.",
-        "mobile_label": "Mobile",
-        "mobile": "9228231735",
-        "website_label": "Website",
-        "website": "https://www.ramwadi.org",
-        "email_label": "Email",
-        "email": "ramwadikarjan@gmail.com",
-        "form": {
-            "title": "For any feedback/changes you can fill up the below form",
-            "placeholder": {
-                "name": "Your name",
-                "email": "Email address",
-                "contact": "Tel/Mobile/#",
-                "subject": "Subject",
-                "message": "Your message"
-            },
-            "errors": {
-                "name": {
-                    "required": "Name is required.",
-                    "min_length": "Name must be at least 2 characters long.",
-                    "max_length": "Name must be maximum 50 characters long."
-                },
-                "email": {
-                    "required": "Email is required.",
-                    "min_length": "Email must be at least 5 characters long.",
-                    "max_length": "Email must be maximum 50 characters long.",
-                    "format": " Check the email format."
-                },
-                "contact": {
-                    "required": "Contact is required.",
-                    "min_length": "Contact must be at least 10 characters long.",
-                    "max_length": "Contact must be maximum 20 characters long."
-                },
-                "subject": {
-                    "required": "Subject is required.",
-                    "min_length": "Subject must be at least 5 characters long.",
-                    "max_length": "Subject must be maximum 100 characters long."
-                },
-                "message": {
-                    "required": "Message is required.",
-                    "min_length": "Message must be at least 10 characters long.",
-                    "max_length": "Message must be maximum 2000 characters long."
-                },
-                "captcha": {
-                    "required": "Captcha is required."
-                }
-            },
-            "submit": "SUBMIT"
-        }
-    },
-    "footer": {
-        "follow_us": "Follow us",
-        "copyright_notice": "2023 Shree Premdasbapa Godadiya Ramwadi Aashram - All rights reserved | Official website of Ramwadi"
+    "sundarkand_box": {
+      "title": "Sundarkand Group",
+      "description": "Shree Godadiyabapa Yuvak Mandal",
+      "button": "Register Now"
     }
+  },
+  "gallery": {
+    "categories": {
+      "all": "All",
+      "temples": "Temples",
+      "founder": "Founder/Guru",
+      "sundarkand": "Sundarkand",
+      "events": "Events"
+    }
+  },
+  "about": {
+    "section1": {
+      "title": "Shree Premdasbapa Godadiya Ashram - Ramwadi, Karjan",
+      "value": "Located in the spiritually rich town of Karjan, Gujarat, Ramwadi Ashram serves as a beacon of faith, devotion, and community service. Established with the divine guidance of Shree Premdasbapa, the ashram welcomes devotees seeking peace, wisdom, and spiritual growth. Through its various activities, it fosters a deep connection between individuals and their faith, making it a sacred space for meditation, reflection, and service"
+    },
+    "section2": {
+      "title": "Our Heritage & Teachings",
+      "value": "The ashram is rooted in the teachings of Shree Premdasbapa, who emphasized the importance of devotion, selfless service, and spiritual wisdom. His philosophy inspires followers to lead a life of righteousness, charity, and inner peace. The ashram continues his legacy through regular religious gatherings, discourses, and communal service."
+    },
+    "section3": {
+      "title": "Spiritual Gatherings & Activities",
+      "value1": "At Ramwadi Ashram, daily prayers, bhajan sessions, and satsangs are held, where devotees come together to sing hymns, chant mantras, and reflect on divine teachings. These gatherings create a blissful atmosphere filled with devotion and spiritual energy, helping individuals find solace and strength in their faith.",
+      "value2": "Special events and festivals are celebrated with great enthusiasm, bringing together devotees from various communities to partake in rituals, discourses, and service programs. These occasions not only strengthen spiritual bonds but also uphold traditions and values passed down through generations."
+    },
+    "section4": {
+      "title": "Meditation & Spiritual Growth",
+      "value": "For those seeking tranquility and inner awakening, the ashram offers a peaceful space for meditation and reflection. Visitors often engage in silent contemplation, allowing them to reconnect with their inner selves, reduce stress, and attain mental clarity. Guided meditation sessions are sometimes conducted to help newcomers embrace the practice of mindfulness and spiritual awareness."
+    },
+    "section5": {
+      "title": "Gaushala: Care for Sacred Cows",
+      "value": "One of the ashram’s remarkable features is its Gaushala, where cows are lovingly cared for with devotion and compassion. In Hindu tradition, cows are considered sacred and symbolically connected to prosperity and divine blessings. At Ramwadi Ashram, the Gaushala stands as a testament to selfless service and reverence for all living beings. Devotees actively engage in feeding, nurturing, and protecting the cows, reinforcing values of kindness and responsibility toward nature."
+    },
+    "section6": {
+      "title": "Community Service & Welfare",
+      "value": "Ramwadi Ashram is deeply committed to seva (selfless service), conducting various social welfare initiatives. Activities such as food distribution, charity work, and support for underprivileged communities are regularly organized to uplift and assist those in need. The ashram welcomes volunteers and devotees to contribute through service, making a meaningful impact on society while nurturing a spirit of generosity."
+    },
+    "section7": {
+      "title": "Welcoming All with Open Arms",
+      "value": "Ramwadi Ashram is more than just a place of worship—it is a spiritual home where faith meets service. Whether you are seeking divine wisdom, peace of mind, or an opportunity to give back to society, the ashram invites all devotees and visitors with warmth and open-hearted hospitality."
+    },
+    "general_text": "Join us in prayer, meditation, and service, as we continue to uphold the profound teachings of Shree Premdasbapa and celebrate the essence of devotion."
+  },
+  "contact": {
+    "page_title": "Contact us",
+    "aashram_name": "Shree Premdasbapa Godadiya Ramwadi Aashram",
+    "address_title": "Jay SiyaRam",
+    "address": "Near railway, Old gas godown, Nava bazar, Karjan, Vadodara, Gujarat, 391240.",
+    "mobile_label": "Mobile",
+    "mobile": "9228231735",
+    "website_label": "Website",
+    "website": "https://www.ramwadi.org",
+    "email_label": "Email",
+    "email": "ramwadikarjan@gmail.com",
+    "form": {
+      "title": "For any feedback/changes you can fill up the below form",
+      "placeholder": {
+        "name": "Your name",
+        "email": "Email address",
+        "contact": "Tel/Mobile/#",
+        "subject": "Subject",
+        "message": "Your message"
+      },
+      "errors": {
+        "name": {
+          "required": "Name is required.",
+          "min_length": "Name must be at least 2 characters long.",
+          "max_length": "Name must be maximum 50 characters long."
+        },
+        "email": {
+          "required": "Email is required.",
+          "min_length": "Email must be at least 5 characters long.",
+          "max_length": "Email must be maximum 50 characters long.",
+          "format": " Check the email format."
+        },
+        "contact": {
+          "required": "Contact is required.",
+          "min_length": "Contact must be at least 10 characters long.",
+          "max_length": "Contact must be maximum 20 characters long."
+        },
+        "subject": {
+          "required": "Subject is required.",
+          "min_length": "Subject must be at least 5 characters long.",
+          "max_length": "Subject must be maximum 100 characters long."
+        },
+        "message": {
+          "required": "Message is required.",
+          "min_length": "Message must be at least 10 characters long.",
+          "max_length": "Message must be maximum 2000 characters long."
+        },
+        "captcha": {
+          "required": "Captcha is required."
+        }
+      },
+      "submit": "SUBMIT"
+    }
+  },
+  "footer": {
+    "follow_us": "Follow us",
+    "copyright_notice": "Shree Premdasbapa Godadiya Ramwadi Aashram - All rights reserved | Official website of Ramwadi"
+  }
 }
