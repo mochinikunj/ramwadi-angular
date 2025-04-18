@@ -11,6 +11,11 @@
   max-width: 100%;
 }
 
+.footer-logo {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
 .social-links {
   height: 100%;
   display: flex;
