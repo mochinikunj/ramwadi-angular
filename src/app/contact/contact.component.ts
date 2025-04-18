@@ -13,7 +13,10 @@ export class ContactComponent implements OnInit {
   siteKey = environment.reCaptchaSiteKey;
   @ViewChild('recaptcha') captchaElem: ReCaptcha2Component | undefined;
 
-  constructor(private fb: FormBuilder, private common: CommonService) {}
+  constructor(
+    private fb: FormBuilder,
+    private common: CommonService,
+  ) {}
 
   ngOnInit(): void {}
 
