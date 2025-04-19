@@ -54,3 +54,7 @@ ul {
   cursor: auto !important;
   pointer-events: none !important;
 }
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 2px #e97000;
+}
