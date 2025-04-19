@@ -30,3 +30,15 @@
   background-color: transparent;
   width: 100%;
 }
+
+.accordion-button {
+  color: #424242 !important; /* Adjust text color if needed */
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000 !important; /* Adjust text color if needed */
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 2px #e97000;
+}
