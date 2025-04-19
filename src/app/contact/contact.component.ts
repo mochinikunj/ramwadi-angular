@@ -10,13 +10,14 @@ import { CommonService } from '../service/common/common.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  siteKey = environment.reCaptchaSiteKey;
+  readonly siteKey = environment.reCaptchaSiteKey;
+  readonly recaptcha = environment.production
+    ? ['', Validators.required]
+    : [''];
+
   @ViewChild('recaptcha') captchaElem: ReCaptcha2Component | undefined;
 
-  constructor(
-    private fb: FormBuilder,
-    private common: CommonService,
-  ) {}
+  constructor(private fb: FormBuilder, private common: CommonService) {}
 
   ngOnInit(): void {}
 
@@ -50,7 +51,7 @@ export class ContactComponent implements OnInit {
         Validators.maxLength(2000),
       ],
     ],
-    recaptcha: ['', Validators.required],
+    recaptcha: this.recaptcha,
   });
 
   // common function to get formControls
