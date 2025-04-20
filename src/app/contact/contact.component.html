@@ -158,14 +158,14 @@
                       {{ 'contact.form.errors.contact.required' | translate }}
                     </div>
                     <div
-                      *ngIf="getControl('contactNumber')?.errors?.['minlength']"
+                      *ngIf="getControl('contactNumber')?.errors?.['pattern']"
                     >
-                      {{ 'contact.form.errors.contact.min_length' | translate }}
+                      {{ 'contact.form.errors.contact.pattern' | translate }}
                     </div>
                     <div
-                      *ngIf="getControl('contactNumber')?.errors?.['maxlength']"
+                      *ngIf="getControl('contactNumber')?.errors?.['minlength'] || getControl('contactNumber')?.errors?.['maxlength']"
                     >
-                      {{ 'contact.form.errors.contact.max_length' | translate }}
+                      {{ 'contact.form.errors.contact.length' | translate }}
                     </div>
                   </div>
 

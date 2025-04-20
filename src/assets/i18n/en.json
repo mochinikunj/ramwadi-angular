@@ -105,8 +105,8 @@
         },
         "contact": {
           "required": "Contact is required.",
-          "min_length": "Contact must be at least 10 characters long.",
-          "max_length": "Contact must be maximum 20 characters long."
+          "length": "Contact number must be 10 characters long.",
+          "pattern": "Contact number must contain only digits 0 to 9."
         },
         "subject": {
           "required": "Subject is required.",
