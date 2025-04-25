@@ -15,19 +15,16 @@ export class HeaderComponent implements OnInit {
     { title: 'ગુજરાતી', code: 'gu' },
   ];
 
-  constructor(
-    private common: CommonService,
-    private header: HeaderService,
-  ) {}
+  constructor(private common: CommonService, private header: HeaderService) {}
 
   ngOnInit(): void {
-    this.common.healthCheck().subscribe({
-      next: (response: any) => {
-        if (response && response.code === 200 && response.status === 'OK') {
-          console.log('Backend is up and running...');
-        }
-      },
-    });
+    // this.common.healthCheck().subscribe({
+    //   next: (response: any) => {
+    //     if (response && response.code === 200 && response.status === 'OK') {
+    //       console.log('Backend is up and running...');
+    //     }
+    //   },
+    // });
 
     this.header.languageChange.subscribe((language) => {
       if (language) {
