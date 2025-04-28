@@ -17,6 +17,8 @@ export class ContactComponent implements OnInit {
 
   @ViewChild('recaptcha') captchaElem: ReCaptcha2Component | undefined;
 
+  viewState: 'form' | { type: 'success' | 'error'; message: string } = 'form';
+
   constructor(private fb: FormBuilder, private common: CommonService) {}
 
   ngOnInit(): void {}
@@ -59,14 +61,13 @@ export class ContactComponent implements OnInit {
     recaptcha: this.recaptcha,
   });
 
-  // common function to get formControls
   getControl(formKey: string): AbstractControl | null {
     return this.contactForm.get(formKey);
   }
 
   async onSubmit(): Promise<void> {
     if (this.contactForm.invalid) {
-      // do something
+      this.contactForm.markAllAsTouched();
       return;
     }
 
@@ -77,14 +78,23 @@ export class ContactComponent implements OnInit {
     this.common.saveContactUsForm(request).subscribe({
       next: (response: any) => {
         if (response && response.code === 200 && response.status === 'OK') {
-          alert('Form Submitted Successfully!');
+          this.viewState = {
+            type: 'success',
+            message: 'Form Submitted Successfully! We will get back to you soon.',
+          };
           this.resetContactForm();
         }
       },
       error: (err) => {
-        const msg =
-          'There are some technical problems, please continue after sometime!';
-        alert(msg);
+        let message = 'An unexpected error occurred. Please try again later.';
+        if (err.status === 400) {
+          message = err.error?.error?.message || 'Invalid form data. Please check your inputs.';
+        } else if (err.status === 429) {
+          message = 'Too many requests. Please try again after 10 minutes.';
+        } else if (err.status === 403) {
+          message = 'Invalid or expired submission. Please try again.';
+        }
+        this.viewState = { type: 'error', message };
       },
     });
   }
@@ -93,7 +103,11 @@ export class ContactComponent implements OnInit {
     if (this.captchaElem) {
       this.captchaElem.resetCaptcha();
     }
-
     this.contactForm.reset();
+  }
+
+  resetToForm(): void {
+    this.viewState = 'form';
+    this.resetContactForm();
   }
 }
