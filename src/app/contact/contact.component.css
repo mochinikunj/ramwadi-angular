@@ -222,3 +222,50 @@ textarea.ng-invalid.ng-dirty {
     height: 250px;
   }
 }
+
+.card {
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 35px;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-light {
+  font-weight: 500;
+}
+
+.success-card {
+  background-color: #198754;
+  color: white;
+}
+
+.success-icon {
+  color: white;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

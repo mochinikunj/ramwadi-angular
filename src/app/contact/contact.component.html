@@ -43,13 +43,11 @@
                     +91 {{ 'contact.mobile' | translate }}
                   </a>
                   <br />
-
                   <strong> {{ 'contact.website_label' | translate }}: </strong>
                   <a href="{{ 'contact.website' | translate }}" target="_blank">
                     {{ ('contact.website' | translate).slice(8) }}
                   </a>
                   <br />
-
                   <strong> {{ 'contact.email_label' | translate }}: </strong>
                   <a
                     href="mailto:{{ 'contact.email' | translate }}"
@@ -59,206 +57,230 @@
                   </a>
                 </div>
               </div>
-              <!-- <div class="location-container"></div> -->
             </div>
             <div class="col-12 col-md-7 mt-4 mt-md-0">
               <div class="contact-form-container">
-                <div class="form-description mb-2">
-                  {{ 'contact.form.title' | translate }}
+                <!-- Success/Error Card -->
+                <div *ngIf="viewState !== 'form'" class="card fade-in">
+                  <div
+                    class="card-body text-center"
+                    [ngClass]="{
+                      'success-card': viewState.type === 'success',
+                      'bg-danger text-white': viewState.type === 'error'
+                    }"
+                  >
+                    <i
+                      class="fas fa-3x mb-3"
+                      [ngClass]="{
+                        'fa-check-circle success-icon': viewState.type === 'success',
+                        'fa-exclamation-circle': viewState.type === 'error'
+                      }"
+                    ></i>
+                    <h5 class="card-title">
+                      {{ viewState.type === 'success' ? 'Success!' : 'Error' }}
+                    </h5>
+                    <p class="card-text">{{ viewState.message }}</p>
+                    <button
+                      *ngIf="viewState.type === 'error'"
+                      class="btn btn-light"
+                      (click)="resetToForm()"
+                    >
+                      Try Again
+                    </button>
+                  </div>
                 </div>
-                <form
-                  class="contact-form"
-                  [formGroup]="contactForm"
-                  (ngSubmit)="onSubmit()"
-                >
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    formControlName="name"
-                    placeholder="{{
-                      'contact.form.placeholder.name' | translate
-                    }}"
-                    title="{{ 'contact.form.placeholder.name' | translate }}"
-                    autocomplete="nope"
-                  />
-                  <div
-                    *ngIf="
-                      getControl('name')?.invalid &&
-                      (getControl('name')?.dirty || getControl('name')?.touched)
-                    "
-                    class="validation-error"
-                  >
-                    <div *ngIf="getControl('name')?.errors?.['required']">
-                      {{ 'contact.form.errors.name.required' | translate }}
-                    </div>
-                    <div *ngIf="getControl('name')?.errors?.['minlength']">
-                      {{ 'contact.form.errors.name.min_length' | translate }}
-                    </div>
-                    <div *ngIf="getControl('name')?.errors?.['maxlength']">
-                      {{ 'contact.form.errors.name.max_length' | translate }}
-                    </div>
+                <!-- Form -->
+                <div *ngIf="viewState === 'form'">
+                  <div class="form-description mb-2">
+                    {{ 'contact.form.title' | translate }}
                   </div>
-
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    formControlName="email"
-                    placeholder="{{
-                      'contact.form.placeholder.email' | translate
-                    }}"
-                    title="{{ 'contact.form.placeholder.email' | translate }}"
-                    autocomplete="nope"
-                  />
-                  <div
-                    *ngIf="
-                      getControl('email')?.invalid &&
-                      (getControl('email')?.dirty ||
-                        getControl('email')?.touched)
-                    "
-                    class="validation-error"
+                  <form
+                    class="contact-form"
+                    [formGroup]="contactForm"
+                    (ngSubmit)="onSubmit()"
                   >
-                    <div *ngIf="getControl('email')?.errors?.['required']">
-                      {{ 'contact.form.errors.email.required' | translate }}
-                    </div>
-                    <div *ngIf="getControl('email')?.errors?.['minlength']">
-                      {{ 'contact.form.errors.email.min_length' | translate }}
-                    </div>
-                    <div *ngIf="getControl('email')?.errors?.['maxlength']">
-                      {{ 'contact.form.errors.email.max_length' | translate }}
-                    </div>
-                    <div *ngIf="getControl('email')?.errors?.['email']">
-                      {{ 'contact.form.errors.email.format' | translate }}
-                    </div>
-                  </div>
-
-                  <input
-                    type="tel"
-                    id="contactNumber"
-                    name="contactNumber"
-                    formControlName="contactNumber"
-                    placeholder="{{
-                      'contact.form.placeholder.contact' | translate
-                    }}"
-                    title="{{ 'contact.form.placeholder.contact' | translate }}"
-                    autocomplete="nope"
-                  />
-                  <div
-                    *ngIf="
-                      getControl('contactNumber')?.invalid &&
-                      (getControl('contactNumber')?.dirty ||
-                        getControl('contactNumber')?.touched)
-                    "
-                    class="validation-error"
-                  >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      formControlName="name"
+                      placeholder="{{ 'contact.form.placeholder.name' | translate }}"
+                      title="{{ 'contact.form.placeholder.name' | translate }}"
+                      autocomplete="nope"
+                    />
                     <div
-                      *ngIf="getControl('contactNumber')?.errors?.['required']"
+                      *ngIf="
+                        getControl('name')?.invalid &&
+                        (getControl('name')?.dirty || getControl('name')?.touched)
+                      "
+                      class="validation-error"
                     >
-                      {{ 'contact.form.errors.contact.required' | translate }}
+                      <div *ngIf="getControl('name')?.errors?.['required']">
+                        {{ 'contact.form.errors.name.required' | translate }}
+                      </div>
+                      <div *ngIf="getControl('name')?.errors?.['minlength']">
+                        {{ 'contact.form.errors.name.min_length' | translate }}
+                      </div>
+                      <div *ngIf="getControl('name')?.errors?.['maxlength']">
+                        {{ 'contact.form.errors.name.max_length' | translate }}
+                      </div>
+                    </div>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      formControlName="email"
+                      placeholder="{{ 'contact.form.placeholder.email' | translate }}"
+                      title="{{ 'contact.form.placeholder.email' | translate }}"
+                      autocomplete="nope"
+                    />
+                    <div
+                      *ngIf="
+                        getControl('email')?.invalid &&
+                        (getControl('email')?.dirty ||
+                          getControl('email')?.touched)
+                      "
+                      class="validation-error"
+                    >
+                      <div *ngIf="getControl('email')?.errors?.['required']">
+                        {{ 'contact.form.errors.email.required' | translate }}
+                      </div>
+                      <div *ngIf="getControl('email')?.errors?.['minlength']">
+                        {{ 'contact.form.errors.email.min_length' | translate }}
+                      </div>
+                      <div *ngIf="getControl('email')?.errors?.['maxlength']">
+                        {{ 'contact.form.errors.email.max_length' | translate }}
+                      </div>
+                      <div *ngIf="getControl('email')?.errors?.['email']">
+                        {{ 'contact.form.errors.email.format' | translate }}
+                      </div>
+                    </div>
+
+                    <input
+                      type="tel"
+                      id="contactNumber"
+                      name="contactNumber"
+                      formControlName="contactNumber"
+                      placeholder="{{ 'contact.form.placeholder.contact' | translate }}"
+                      title="{{ 'contact.form.placeholder.contact' | translate }}"
+                      autocomplete="nope"
+                    />
+                    <div
+                      *ngIf="
+                        getControl('contactNumber')?.invalid &&
+                        (getControl('contactNumber')?.dirty ||
+                          getControl('contactNumber')?.touched)
+                      "
+                      class="validation-error"
+                    >
+                      <div
+                        *ngIf="getControl('contactNumber')?.errors?.['required']"
+                      >
+                        {{ 'contact.form.errors.contact.required' | translate }}
+                      </div>
+                      <div
+                        *ngIf="getControl('contactNumber')?.errors?.['pattern']"
+                      >
+                        {{ 'contact.form.errors.contact.pattern' | translate }}
+                      </div>
+                      <div
+                        *ngIf="
+                          getControl('contactNumber')?.errors?.['minlength'] ||
+                          getControl('contactNumber')?.errors?.['maxlength']
+                        "
+                      >
+                        {{ 'contact.form.errors.contact.length' | translate }}
+                      </div>
+                    </div>
+
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      formControlName="subject"
+                      placeholder="{{ 'contact.form.placeholder.subject' | translate }}"
+                      title="{{ 'contact.form.placeholder.subject' | translate }}"
+                      autocomplete="nope"
+                    />
+                    <div
+                      *ngIf="
+                        getControl('subject')?.invalid &&
+                        (getControl('subject')?.dirty ||
+                          getControl('subject')?.touched)
+                      "
+                      class="validation-error"
+                    >
+                      <div *ngIf="getControl('subject')?.errors?.['required']">
+                        {{ 'contact.form.errors.subject.required' | translate }}
+                      </div>
+                      <div *ngIf="getControl('subject')?.errors?.['minlength']">
+                        {{ 'contact.form.errors.subject.min_length' | translate }}
+                      </div>
+                      <div *ngIf="getControl('subject')?.errors?.['maxlength']">
+                        {{ 'contact.form.errors.subject.max_length' | translate }}
+                      </div>
+                    </div>
+
+                    <textarea
+                      id="message"
+                      name="message"
+                      formControlName="message"
+                      placeholder="{{ 'contact.form.placeholder.message' | translate }}"
+                      title="{{ 'contact.form.placeholder.message' | translate }}"
+                      rows="5"
+                      maxlength="2000"
+                    ></textarea>
+                    <div
+                      *ngIf="
+                        getControl('message')?.invalid &&
+                        (getControl('message')?.dirty ||
+                          getControl('message')?.touched)
+                      "
+                      class="validation-error"
+                    >
+                      <div *ngIf="getControl('message')?.errors?.['required']">
+                        {{ 'contact.form.errors.message.required' | translate }}
+                      </div>
+                      <div *ngIf="getControl('message')?.errors?.['minlength']">
+                        {{ 'contact.form.errors.message.min_length' | translate }}
+                      </div>
+                      <div *ngIf="getControl('message')?.errors?.['maxlength']">
+                        {{ 'contact.form.errors.message.max_length' | translate }}
+                      </div>
+                    </div>
+
+                    <div class="google-capcha-container">
+                      <ngx-recaptcha2
+                        #recaptcha
+                        id="recaptcha"
+                        [siteKey]="siteKey"
+                        formControlName="recaptcha"
+                      ></ngx-recaptcha2>
                     </div>
                     <div
-                      *ngIf="getControl('contactNumber')?.errors?.['pattern']"
+                      *ngIf="
+                        getControl('recaptcha')?.invalid &&
+                        (getControl('recaptcha')?.dirty ||
+                          getControl('recaptcha')?.touched)
+                      "
+                      class="validation-error"
                     >
-                      {{ 'contact.form.errors.contact.pattern' | translate }}
+                      <div *ngIf="getControl('recaptcha')?.errors?.['required']">
+                        {{ 'contact.form.errors.captcha.required' | translate }}
+                      </div>
                     </div>
-                    <div
-                      *ngIf="getControl('contactNumber')?.errors?.['minlength'] || getControl('contactNumber')?.errors?.['maxlength']"
+
+                    <button
+                      id="contact-form-submit"
+                      type="submit"
+                      [class.enabled]="contactForm.valid"
+                      [disabled]="!contactForm.valid"
                     >
-                      {{ 'contact.form.errors.contact.length' | translate }}
-                    </div>
-                  </div>
-
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    formControlName="subject"
-                    placeholder="{{
-                      'contact.form.placeholder.subject' | translate
-                    }}"
-                    title="{{ 'contact.form.placeholder.subject' | translate }}"
-                    autocomplete="nope"
-                  />
-                  <div
-                    *ngIf="
-                      getControl('subject')?.invalid &&
-                      (getControl('subject')?.dirty ||
-                        getControl('subject')?.touched)
-                    "
-                    class="validation-error"
-                  >
-                    <div *ngIf="getControl('subject')?.errors?.['required']">
-                      {{ 'contact.form.errors.subject.required' | translate }}
-                    </div>
-                    <div *ngIf="getControl('subject')?.errors?.['minlength']">
-                      {{ 'contact.form.errors.subject.min_length' | translate }}
-                    </div>
-                    <div *ngIf="getControl('subject')?.errors?.['maxlength']">
-                      {{ 'contact.form.errors.subject.max_length' | translate }}
-                    </div>
-                  </div>
-
-                  <textarea
-                    id="message"
-                    name="message"
-                    formControlName="message"
-                    placeholder="{{
-                      'contact.form.placeholder.message' | translate
-                    }}"
-                    title="{{ 'contact.form.placeholder.message' | translate }}"
-                    rows="5"
-                    maxlength="2000"
-                  ></textarea>
-                  <div
-                    *ngIf="
-                      getControl('message')?.invalid &&
-                      (getControl('message')?.dirty ||
-                        getControl('message')?.touched)
-                    "
-                    class="validation-error"
-                  >
-                    <div *ngIf="getControl('message')?.errors?.['required']">
-                      {{ 'contact.form.errors.message.required' | translate }}
-                    </div>
-                    <div *ngIf="getControl('message')?.errors?.['minlength']">
-                      {{ 'contact.form.errors.message.min_length' | translate }}
-                    </div>
-                    <div *ngIf="getControl('message')?.errors?.['maxlength']">
-                      {{ 'contact.form.errors.message.max_length' | translate }}
-                    </div>
-                  </div>
-
-                  <div class="google-capcha-container">
-                    <ngx-recaptcha2
-                      #recaptcha
-                      id="recaptcha"
-                      [siteKey]="siteKey"
-                      formControlName="recaptcha"
-                    ></ngx-recaptcha2>
-                  </div>
-                  <div
-                    *ngIf="
-                      getControl('recaptcha')?.invalid &&
-                      (getControl('recaptcha')?.dirty ||
-                        getControl('recaptcha')?.touched)
-                    "
-                    class="validation-error"
-                  >
-                    <div *ngIf="getControl('recaptcha')?.errors?.['required']">
-                      {{ 'contact.form.errors.captcha.required' | translate }}
-                    </div>
-                  </div>
-
-                  <button
-                    id="contact-form-submit"
-                    type="submit"
-                    [class.enabled]="contactForm.valid"
-                    [disabled]="!contactForm.valid"
-                  >
-                    {{ 'contact.form.submit' | translate }}
-                  </button>
-                </form>
+                      {{ 'contact.form.submit' | translate }}
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
