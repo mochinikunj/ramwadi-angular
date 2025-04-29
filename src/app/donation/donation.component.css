@@ -1,3 +1,23 @@
 .qr-container img {
+  border: 10px solid #2D3191;
   width: 100%;
+}
+
+.qr-container {
+  width: 80%;
+  height: auto;
+  border: 15px solid #F08321;
+  margin: auto;
+}
+
+.account-details {
+  color: #2D3191;
+  font-family: 'Karla Bold';
+  font-size: large;
+}
+
+@media (max-width: 767px) {
+  .qr-description {
+    width: 80%;
+  }
 }
