@@ -82,7 +82,8 @@ export class ContactComponent implements OnInit {
         if (response && response.code === 200 && response.status === 'OK') {
           this.viewState = {
             type: 'success',
-            message: 'Form Submitted Successfully! We will get back to you soon.',
+            message:
+              'Form Submitted Successfully! We will get back to you soon.',
           };
           this.resetContactForm();
         }
@@ -90,7 +91,9 @@ export class ContactComponent implements OnInit {
       error: (err) => {
         let message = 'An unexpected error occurred. Please try again later.';
         if (err.status === 400) {
-          message = err.error?.error?.message || 'Invalid form data. Please check your inputs.';
+          message =
+            err.error?.error?.message ||
+            'Invalid form data. Please check your inputs.';
         } else if (err.status === 429) {
           message = 'Too many requests. Please try again after 10 minutes.';
         } else if (err.status === 403) {
@@ -101,7 +104,7 @@ export class ContactComponent implements OnInit {
         this.isSubmitting = false;
       },
       complete: () => {
-        this.isSubmitting = false;s
+        this.isSubmitting = false;
       },
     });
   }
