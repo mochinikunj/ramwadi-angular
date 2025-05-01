@@ -18,6 +18,7 @@ export class ContactComponent implements OnInit {
   @ViewChild('recaptcha') captchaElem: ReCaptcha2Component | undefined;
 
   viewState: 'form' | { type: 'success' | 'error'; message: string } = 'form';
+  isSubmitting: boolean = false;
 
   constructor(private fb: FormBuilder, private common: CommonService) {}
 
@@ -71,6 +72,7 @@ export class ContactComponent implements OnInit {
       return;
     }
 
+    this.isSubmitting = true;
     this.submitFormToBackend(this.contactForm.value);
   }
 
@@ -95,6 +97,11 @@ export class ContactComponent implements OnInit {
           message = 'Invalid or expired submission. Please try again.';
         }
         this.viewState = { type: 'error', message };
+        this.resetContactForm();
+        this.isSubmitting = false;
+      },
+      complete: () => {
+        this.isSubmitting = false;s
       },
     });
   }

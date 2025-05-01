@@ -16,6 +16,10 @@
   font-size: large;
 }
 
+.donate-us-description {
+  font-family: 'Roboto Regular', sans-serif;
+}
+
 @media (max-width: 767px) {
   .qr-description {
     width: 80%;

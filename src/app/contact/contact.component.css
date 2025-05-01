@@ -269,3 +269,17 @@ textarea.ng-invalid.ng-dirty {
     transform: translateY(0);
   }
 }
+
+.loading-spinner-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.spinner-fade-in {
+  animation: spinnerFadeIn 0.5s;
+}
+
+@keyframes spinnerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
