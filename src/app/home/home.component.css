@@ -1,0 +1,366 @@
+.welcome-container {
+  padding: 50px 200px;
+  text-align: center;
+  background-image: linear-gradient(#424242, #424242),
+    url(./../../assets/images/welcome-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: saturation;
+}
+
+.welcome-to-ramwadi img {
+  margin: 10px auto;
+}
+
+.welcome-title {
+  font-family: 'Karla Bold', sans-serif;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.welcome-description {
+  padding: 10px 40px;
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 15px;
+}
+
+.know-more {
+  display: inline-block;
+  font-family: 'Karla Bold', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.know-more:hover {
+  color: #e97000;
+}
+
+.about-sundarkand {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(./../../assets/images/about-sundarkand-bg-img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sundarkand-img,
+.sundarkand-text {
+  height: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+.sundarkand-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sundarkand-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quick-links-card {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.quick-links-card.donation {
+  background-color: #ccc;
+}
+
+.quick-links-card.annakshetra {
+  background-color: #ddd;
+}
+
+.quick-links-card.sundarkand {
+  background-color: #ccc;
+}
+
+.quick-links-card .card-image {
+  padding: 10px 0;
+  height: 145px;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.quick-links-card .card-text {
+  height: 100px;
+}
+
+.quick-links .card-title {
+  font-family: 'Karla Bold', sans-serif;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+.annakshetra .card-title {
+  margin-bottom: 0;
+}
+
+.annakshetra .card-subtitle {
+  margin-bottom: 0.4px;
+}
+
+.quick-links .card-subtitle {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 18px;
+  color: #424242;
+}
+
+.card-action a {
+  padding: 5px 10px;
+  font-family: 'Roboto Medium', sans-serif;
+  text-decoration: none;
+  color: #424242;
+  background-color: transparent;
+  border: 1px solid #424242;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-action a:hover {
+  color: white;
+  background-color: #e97000;
+  border: 1px solid transparent;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .welcome-container {
+    padding: 40px 180px;
+  }
+
+  .welcome-to-ramwadi img {
+    margin: 8px auto;
+  }
+
+  .welcome-title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .welcome-description {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+
+  .know-more {
+    font-size: 13px;
+  }
+
+  .quick-links-card {
+    padding: 18px;
+  }
+
+  .quick-links-card .card-image {
+    padding: 8px 0;
+    height: 140px;
+  }
+
+  .quick-links-card .card-text {
+    height: 90px;
+  }
+
+  .quick-links .card-title {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+  }
+
+  .quick-links .card-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .welcome-container {
+    padding: 30px 100px;
+  }
+
+  .welcome-to-ramwadi img {
+    margin: 8px auto;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .welcome-description {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .know-more {
+    margin: 10px 0;
+    font-size: 13px;
+  }
+
+  .quick-links-card {
+    padding: 15px;
+  }
+
+  .quick-links-card .card-image {
+    padding: 6px 0;
+    height: 130px;
+  }
+
+  .quick-links-card .card-text {
+    height: 80px;
+  }
+
+  .quick-links .card-title {
+    font-size: 22px;
+    letter-spacing: -0.4px;
+    margin-bottom: 3px;
+  }
+
+  .quick-links .card-subtitle {
+    font-size: 15px;
+  }
+
+  .card-action a {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .welcome-container {
+    padding: 20px 70px;
+  }
+
+  .welcome-to-ramwadi img {
+    margin: 8px auto;
+  }
+
+  .welcome-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .welcome-description {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .know-more {
+    margin: 10px 0;
+    font-size: 13px;
+  }
+
+  .quick-links-card {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .quick-links-card .card-image {
+    padding: 4px 0;
+    height: 120px;
+  }
+
+  .quick-links-card .card-text {
+    height: auto;
+    padding: 8px 0;
+  }
+
+  .quick-links .card-title {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+  }
+
+  .quick-links .card-subtitle {
+    font-size: 14px;
+  }
+
+  .card-action a {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .welcome-container {
+    padding: 10px 15px;
+  }
+
+  .welcome-to-ramwadi img {
+    margin: 6px auto;
+  }
+
+  .welcome-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .welcome-description {
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .know-more {
+    margin: 8px 0;
+    font-size: 12px;
+  }
+
+  .sundarkand-img img {
+    width: 180px;
+  }
+
+  .quick-links-card {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .quick-links-card .card-image {
+    padding: 4px 0;
+    height: 100px;
+  }
+
+  .quick-links-card .card-text {
+    height: auto;
+    padding: 8px 0;
+  }
+
+  .quick-links .card-title {
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+  }
+
+  .quick-links .card-subtitle {
+    font-size: 11px;
+  }
+
+  .card-action a {
+    padding: 5px 4px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,132 @@
+.header-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
+  padding: 1rem;
+}
+
+.logo img {
+  width: 150px;
+  max-width: 100%;
+}
+
+.navigation-menu {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigation-menu > li,
+.navigation-menu .dropdown-toggle {
+  display: inline-block;
+}
+
+.navigation-menu li > a,
+.navigation-menu li button {
+  padding: 5px 10px;
+  font-family: 'Roboto Medium', sans-serif;
+  letter-spacing: 0.22px;
+  color: #424242;
+  text-decoration: none;
+}
+
+.navigation-menu > li > a:hover,
+.navigation-menu .dropdown-toggle:hover {
+  color: #e97000;
+}
+
+.dropdown-toggle {
+  border: none;
+  background-color: transparent;
+}
+
+.language-container .language-dropdown {
+  max-width: 100%;
+  padding: 5px 10px;
+  font-family: 'Roboto Medium', sans-serif;
+  color: #424242;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #424242;
+  border-radius: 5px;
+}
+
+.right-side-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.right-side-menu .dropdown {
+  position: initial;
+}
+
+.right-side-menu .dropdown-menu li {
+  display: inline-block;
+  width: 50%;
+}
+
+.right-side-menu .dropdown-item {
+  margin: 8px auto;
+  text-align: center;
+  font-family: 'Roboto Medium', sans-serif;
+  font-size: 12px;
+}
+
+.dropdown-toggle.menu-bar-container::after {
+  content: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navigation-menu > li,
+  .language-container .language-dropdown {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .dropdown-menu {
+    width: 100vw;
+  }
+
+  .navigation-menu > li,
+  .language-container .language-dropdown {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .menu-bar-container {
+    padding: 2px 8px;
+    border: 1px solid #424242;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .dropdown-menu {
+    width: 100vw;
+  }
+
+  .logo img {
+    width: 100px;
+    max-width: 100%;
+  }
+
+  .navigation-menu > li,
+  .language-container .language-dropdown {
+    padding: 5px 4px;
+    font-size: 11px;
+  }
+
+  .menu-bar-container {
+    padding: 1px 6px;
+    border: 1px solid #424242;
+    border-radius: 5px;
+  }
+}

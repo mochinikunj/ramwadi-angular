@@ -1,0 +1,177 @@
+<div class="body-box">
+  <div class="img-slider-container">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div class="carousel-indicators">
+        <ng-container *ngFor="let item of imgSliderIterator; let i = index">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="item === 1"
+            aria-current="true"
+            [attr.aria-label]="'Slide' + ' ' + item"
+          ></button>
+        </ng-container>
+      </div>
+      <div class="carousel-inner">
+        <ng-container *ngFor="let item of imgSliderIterator">
+          <div class="carousel-item" [class.active]="item === 1">
+            <img
+              [src]="'assets/images/home/img-slider' + item + '.jpg'"
+              class="d-block w-100"
+              alt="Slider Image"
+              loading="lazy"
+            />
+          </div>
+        </ng-container>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="welcome-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="welcome-to-ramwadi">
+            <div class="welcome-header">
+              <img
+                src="assets/images/welcome-logo.png"
+                class="d-block"
+                alt="Welcome to Ramwadi"
+              />
+              <span class="welcome-title">
+                {{ 'home.about_temple_title' | translate }}
+              </span>
+              <img
+                src="assets/images/welcome-logo-border.png"
+                class="d-block"
+                alt="Logo border"
+              />
+            </div>
+            <div class="welcome-description">
+              {{ 'home.about_temple' | translate }}
+            </div>
+            <a class="know-more" routerLink="/about">
+              {{ 'home.know_more' | translate }}
+            </a>
+            <img
+              src="assets/images/welcome-logo-border.png"
+              class="d-block"
+              alt="Logo border"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-sundarkand">
+    <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+      <div class="sundarkand-img">
+        <img src="assets/images/hanumanji.png" alt="Hanumanji" />
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
+      <div class="sundarkand-text">
+        <div class="welcome-title">
+          {{ 'home.about_sundarkand_title' | translate }}
+        </div>
+        <img
+          src="assets/images/welcome-logo-border.png"
+          class="d-block mx-auto my-2"
+          alt="Logo border"
+        />
+        <div class="welcome-description">
+          {{ 'home.about_sundarkand' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-links">
+    <div class="col-12 col-md-4 px-0">
+      <div class="quick-links-card donation">
+        <div class="card-image">
+          <img src="assets/images/donation-img.png" alt="Donate" />
+        </div>
+        <div class="card-text">
+          <div class="card-title">
+            {{ 'home.donation_box.title' | translate }}
+          </div>
+          <div class="card-subtitle">
+            {{ 'home.donation_box.description' | translate }}
+          </div>
+        </div>
+        <div class="card-action">
+          <a routerLink="/donation">
+            {{ 'home.donation_box.button' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 px-0">
+      <div class="quick-links-card annakshetra">
+        <div class="card-image">
+          <img src="assets/images/annakshetra-img.png" alt="Donate" />
+        </div>
+        <div class="card-text">
+          <div class="card-title">
+            {{ 'home.prasadam_box.title' | translate }}
+          </div>
+          <div class="card-subtitle">
+            {{ 'home.prasadam_box.description' | translate }}
+          </div>
+        </div>
+        <div class="card-action">
+          <!-- <a routerLink="/about" fragment="id3"> More Details </a> -->
+          <a routerLink="/about">
+            {{ 'home.prasadam_box.button' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 px-0">
+      <div class="quick-links-card sundarkand">
+        <div class="card-image">
+          <img src="assets/images/sundarkand-img.png" alt="Donate" />
+        </div>
+        <div class="card-text">
+          <div class="card-title">
+            {{ 'home.sundarkand_box.title' | translate }}
+          </div>
+          <div class="card-subtitle">
+            {{ 'home.sundarkand_box.description' | translate }}
+          </div>
+        </div>
+        <div class="card-action">
+          <a routerLink="/contact">
+            {{ 'home.sundarkand_box.button' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
