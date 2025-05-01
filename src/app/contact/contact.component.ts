@@ -83,7 +83,7 @@ export class ContactComponent implements OnInit {
           this.viewState = {
             type: 'success',
             message:
-              'Form Submitted Successfully! We will get back to you soon.',
+              'Form Submitted Successfully. We will get back to you soon.',
           };
           this.resetContactForm();
         }
