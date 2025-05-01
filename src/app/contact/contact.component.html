@@ -60,8 +60,13 @@
             </div>
             <div class="col-12 col-md-7 mt-4 mt-md-0">
               <div class="contact-form-container">
+                <!-- Circular Loading Spinner -->
+                <div *ngIf="isSubmitting" class="loading-spinner-container spinner-fade-in text-center">
+                  <i class="fas fa-spinner fa-spin fa-3x"></i>
+                  <p class="mt-2">Submitting your request...</p>
+                </div>
                 <!-- Success/Error Card -->
-                <div *ngIf="viewState !== 'form'" class="card fade-in">
+                <div *ngIf="viewState !== 'form' && !isSubmitting" class="card fade-in">
                   <div
                     class="card-body text-center"
                     [ngClass]="{
@@ -90,7 +95,7 @@
                   </div>
                 </div>
                 <!-- Form -->
-                <div *ngIf="viewState === 'form'">
+                <div *ngIf="viewState === 'form' && !isSubmitting">
                   <div class="form-description mb-2">
                     {{ 'contact.form.title' | translate }}
                   </div>
