@@ -25,8 +25,8 @@ import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
   const drupalUrl = environment.drupalUrl;
-  // return new TranslateHttpLoader(http, `${drupalUrl}/sites/default/files/translations/`, '.json');
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, `${drupalUrl}/sites/default/files/translations/`, '.json');
+  //return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
