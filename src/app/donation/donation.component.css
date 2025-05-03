@@ -1,19 +1,18 @@
 .qr-container img {
-  border: 10px solid #2D3191;
+  border: 10px solid #2d3191;
   width: 100%;
 }
 
 .qr-container {
   width: 80%;
   height: auto;
-  border: 15px solid #F08321;
+  border: 15px solid #f08321;
   margin: auto;
 }
 
 .account-details {
-  color: #2D3191;
-  font-family: 'Karla Bold';
-  font-size: large;
+  color: #2d3191;
+  font-family: 'Karla Regular';
 }
 
 .donate-us-description {
@@ -23,5 +22,10 @@
 @media (max-width: 767px) {
   .qr-description {
     width: 80%;
+  }
+
+  .account-details,
+  .donate-us-description {
+    font-size: 14px;
   }
 }
