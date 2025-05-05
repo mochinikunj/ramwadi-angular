@@ -27,9 +27,8 @@ export function createTranslateLoader(http: HttpClient) {
   const translationsPath = !environment.production
     ? `${environment.drupalUrl}/sites/default/files/translations/`
     : `./assets/i18n/`;
-  console.log(translationsPath);
 
-  return new TranslateHttpLoader(http, `./assets/i18n/`, '.json');
+  return new TranslateHttpLoader(http, translationsPath, '.json');
 }
 
 @NgModule({
