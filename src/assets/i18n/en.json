@@ -126,6 +126,23 @@
       "submit": "SUBMIT"
     }
   },
+  "donation": {
+    "acc_details_header": "Account Details",
+    "name": "NAME",
+    "name_value": "SHRI PREMDAS BAPA GODADIYA RAMWADI ASRAM - KARJAN",
+    "AC": "A/C",
+    "AC_value": "02110100001309",
+    "IFCS_CODE": "IFCS CODE",
+    "IFCS_CODE_value": "BARBOKARJAN",
+    "BRANCH": "BRANCH",
+    "BRANCH_value": "BANK OF BARODA - KARJAN",
+    "vpa": "vpa",
+    "vpa_value": "shrip92282@barodampay",
+    "80G_msg": "The amount of donation is eligible for deduction of income tax under 80G - AABTS8830RF20241",
+    "support_us_header": "Support Our Divine Mission",
+    "support_us_para1": "At Shree Premdasbapa Godadiya Ashram – Ramwadi, Karjan, your generous donations help us carry forward a sacred mission rooted in faith, service, and community upliftment. With your support, we organize spiritual activities like Sundarkand Path, Hanumanji and Mahadev Pujas, and grand Kathas by revered speakers; care for cows in our Gaushala with devotion; conduct free food distribution (Sadavrat) thrice a week; and actively engage in temple and ashram development. We also encourage spiritual values in the younger generation by inviting students from various schools to participate in devotional singing and speeches, rewarding them and offering prasad.",
+    "support_us_para2": "Every Hindu festival — from Ram Navami and Janmashtami to Hanuman Jayanti, Guru Purnima, Purnima events, and Shravan Sundays—is celebrated with Annadan and Bhandara. Each rupee you offer becomes a part of this divine cycle of devotion, dharma, and seva."
+  },
   "footer": {
     "follow_us": "Follow us",
     "copyright_notice": "Shree Premdasbapa Godadiya Ramwadi Aashram - All rights reserved | Official website of Ramwadi"
