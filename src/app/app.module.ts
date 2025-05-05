@@ -25,7 +25,7 @@ import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
   const translationsPath = environment.production
-    ? `${environment.drupalUrl}/sites/default/files/translations/`
+    ? `${environment.drupalUrl}/translations/`
     : `./assets/i18n/`;
 
   return new TranslateHttpLoader(http, './assets/i18n', '.json');
