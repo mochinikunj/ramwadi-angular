@@ -24,12 +24,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
-  const translationsPath = !environment.production
-    ? `${environment.drupalUrl}/sites/default/files/translations/`
-    : `./assets/i18n/`;
-  console.log(translationsPath);
-
-  return new TranslateHttpLoader(http, `./assets/i18n/`, '.json');
+  const drupalUrl = environment.drupalUrl;
+  return new TranslateHttpLoader(http, `${drupalUrl}/translations/`, '.json');
+  //return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
