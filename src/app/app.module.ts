@@ -28,7 +28,7 @@ export function createTranslateLoader(http: HttpClient) {
     ? `${environment.drupalUrl}/sites/default/files/translations/`
     : `./assets/i18n/`;
 
-  return new TranslateHttpLoader(http, translationsPath, '.json');
+  return new TranslateHttpLoader(http, './assets/i18n', '.json');
 }
 
 @NgModule({
