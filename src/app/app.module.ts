@@ -61,10 +61,10 @@ export function createTranslateLoader(http: HttpClient) {
     NgxCaptchaModule,
   ],
   providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
+    // {
+    //   provide: LocationStrategy,
+    //   useClass: HashLocationStrategy,
+    // },
     TranslateService,
   ],
   bootstrap: [AppComponent],
