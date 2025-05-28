@@ -1,0 +1,47 @@
+name: Build and Push Compiled JS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Angular Repository
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular App
+        run: npm run build
+
+      - name: Checkout Compiled JS Repository
+        uses: actions/checkout@v4
+        with:
+          repository: NidhiPatadia/ramwadi
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          path: compiled-js  # Use a distinct path to avoid confusion
+
+      - name: Copy Compiled JS
+        run: |
+          rm -rf compiled-js/*  # Clear the contents of the cloned ramwadi repo
+          cp -r dist/ramwadi-angular/* compiled-js/  # Copy the contents of dist/ramwadi-angular directly into the root
+
+      - name: Commit and Push to Compiled JS Repo
+        run: |
+          cd compiled-js
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Update compiled JS from ramwadi-angular dev branch build"
+          git push
