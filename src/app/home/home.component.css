@@ -1,3 +1,7 @@
+.custom-carousel-img {
+  height: 90vh;
+}
+
 .welcome-container {
   padding: 50px 200px;
   text-align: center;
@@ -152,6 +156,10 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .custom-carousel-img {
+    height: 80vh;
+  }
+
   .welcome-container {
     padding: 40px 180px;
   }
@@ -199,6 +207,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .custom-carousel-img {
+    height: 70vh;
+  }
+
   .welcome-container {
     padding: 30px 100px;
   }
@@ -252,6 +264,10 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+  .custom-carousel-img {
+    height: 50vh;
+  }
+
   .welcome-container {
     padding: 20px 70px;
   }
@@ -307,6 +323,10 @@
 }
 
 @media (max-width: 575px) {
+  .custom-carousel-img {
+    height: 25vh;
+  }
+
   .welcome-container {
     padding: 10px 15px;
   }

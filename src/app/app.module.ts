@@ -24,8 +24,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
-  const drupalUrl = environment.drupalUrl;
-  // return new TranslateHttpLoader(http, `${drupalUrl}/sites/default/files/translations/`, '.json');
+  const translationsPath = environment.production
+    ? `${environment.drupalUrl}/translations/`
+    : `./assets/i18n/`;
+
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -59,10 +61,10 @@ export function createTranslateLoader(http: HttpClient) {
     NgxCaptchaModule,
   ],
   providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
+    // {
+    //   provide: LocationStrategy,
+    //   useClass: HashLocationStrategy,
+    // },
     TranslateService,
   ],
   bootstrap: [AppComponent],

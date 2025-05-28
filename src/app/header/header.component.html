@@ -53,6 +53,15 @@
           {{ 'header.contact' | translate }}
         </a>
       </li>
+      <li>
+        <a
+          routerLink="/donation"
+          routerLinkActive="active-route"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ 'header.donation' | translate }}
+        </a>
+      </li>
       <!-- <li class="dropdown">
                 <button class="dropdown-toggle more" type="button" id="dropdownMenuMoreButton" 
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -139,6 +148,16 @@
               [routerLinkActiveOptions]="{ exact: true }"
             >
               {{ 'header.contact' | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/donation"
+              routerLinkActive="active-route"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ 'header.donation' | translate }}
             </a>
           </li>
           <!-- <li><a class="dropdown-item" routerLink="/"> More </a></li>
