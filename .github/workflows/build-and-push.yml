@@ -39,7 +39,7 @@ jobs:
       - name: Commit and Push to Compiled JS Repo
         run: |
           cd compiled-js
-          git config user.name "GitHub Actions Bot"
+          git config user.name "Nikunj Mochi"
           git config user.email "actions@github.com"
           git add .
           git commit -m "Update compiled JS from ramwadi-angular dev branch build"
