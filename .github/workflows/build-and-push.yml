@@ -32,9 +32,31 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           path: compiled-js  # Use a distinct path to avoid confusion
 
+      - name: Preserve CNAME File
+        run: |
+          # Check if CNAME exists and back it up
+          if [ -f compiled-js/CNAME ]; then
+            cp compiled-js/CNAME compiled-js-CNAME.bak
+            echo "Backed up CNAME file"
+          else
+            echo "CNAME file not found in compiled-js"
+          fi
+
       - name: Copy Compiled JS
         run: |
-          cp -r dist/ramwadi-angular/* compiled-js/  # Copy the contents of dist/ramwadi-angular directly into the root
+          # Copy files from dist/ramwadi-angular/ to compiled-js/, replacing existing files
+          cp -r dist/ramwadi-angular/* compiled-js/
+          echo "Copied compiled JS files to compiled-js, replacing existing files"
+
+      - name: Restore CNAME File
+        run: |
+          # Restore the CNAME file if it was backed up
+          if [ -f compiled-js-CNAME.bak ]; then
+            mv compiled-js-CNAME.bak compiled-js/CNAME
+            echo "Restored CNAME file"
+          else
+            echo "No CNAME backup found to restore"
+          fi
 
       - name: Commit and Push to Compiled JS Repo
         run: |
