@@ -34,7 +34,6 @@ jobs:
 
       - name: Copy Compiled JS
         run: |
-          rm -rf compiled-js/*  # Clear the contents of the cloned ramwadi repo
           cp -r dist/ramwadi-angular/* compiled-js/  # Copy the contents of dist/ramwadi-angular directly into the root
 
       - name: Commit and Push to Compiled JS Repo
