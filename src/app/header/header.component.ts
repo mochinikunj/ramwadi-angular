@@ -15,7 +15,10 @@ export class HeaderComponent implements OnInit {
     { title: 'ગુજરાતી', code: 'gu' },
   ];
 
-  constructor(private common: CommonService, private header: HeaderService) {}
+  constructor(
+    private common: CommonService,
+    private header: HeaderService,
+  ) {}
 
   ngOnInit(): void {
     // this.common.healthCheck().subscribe({
