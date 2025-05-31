@@ -16,7 +16,7 @@ export class HeaderService {
   constructor(
     private readonly translate: TranslateService,
     private readonly router: Router,
-    private readonly rendererFactory: RendererFactory2
+    private readonly rendererFactory: RendererFactory2,
   ) {
     if (
       this.userLanguage &&

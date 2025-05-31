@@ -20,7 +20,10 @@ export class ContactComponent implements OnInit {
   viewState: 'form' | { type: 'success' | 'error'; message: string } = 'form';
   isSubmitting: boolean = false;
 
-  constructor(private fb: FormBuilder, private common: CommonService) {}
+  constructor(
+    private fb: FormBuilder,
+    private common: CommonService,
+  ) {}
 
   ngOnInit(): void {}
 

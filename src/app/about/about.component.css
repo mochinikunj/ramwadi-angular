@@ -1,6 +1,6 @@
 .about-page {
-  background-image: linear-gradient(#424242, #424242),
-    url(./../../assets/images/welcome-bg.jpg);
+  background-image:
+    linear-gradient(#424242, #424242), url(./../../assets/images/welcome-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
