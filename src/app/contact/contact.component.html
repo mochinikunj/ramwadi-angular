@@ -48,37 +48,44 @@
                     {{ ('contact.website' | translate).slice(8) }}
                   </a>
                   <br />
-                  <strong> {{ 'contact.email_label' | translate }}: </strong>
+                  <!-- <strong> {{ 'contact.email_label' | translate }}: </strong>
                   <a
                     href="mailto:{{ 'contact.email' | translate }}"
                     target="_blank"
                   >
                     {{ 'contact.email' | translate }}
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-7 mt-4 mt-md-0">
               <div class="contact-form-container">
                 <!-- Circular Loading Spinner -->
-                <div *ngIf="isSubmitting" class="loading-spinner-container spinner-fade-in text-center">
+                <div
+                  *ngIf="isSubmitting"
+                  class="loading-spinner-container spinner-fade-in text-center"
+                >
                   <i class="fas fa-spinner fa-spin fa-3x"></i>
                   <p class="mt-2">Submitting your request...</p>
                 </div>
                 <!-- Success/Error Card -->
-                <div *ngIf="viewState !== 'form' && !isSubmitting" class="card fade-in">
+                <div
+                  *ngIf="viewState !== 'form' && !isSubmitting"
+                  class="card fade-in"
+                >
                   <div
                     class="card-body text-center"
                     [ngClass]="{
                       'success-card': viewState.type === 'success',
-                      'bg-danger text-white': viewState.type === 'error'
+                      'bg-danger text-white': viewState.type === 'error',
                     }"
                   >
                     <i
                       class="fas fa-3x mb-3"
                       [ngClass]="{
-                        'fa-check-circle success-icon': viewState.type === 'success',
-                        'fa-exclamation-circle': viewState.type === 'error'
+                        'fa-check-circle success-icon':
+                          viewState.type === 'success',
+                        'fa-exclamation-circle': viewState.type === 'error',
                       }"
                     ></i>
                     <h5 class="card-title">
@@ -109,14 +116,17 @@
                       id="name"
                       name="name"
                       formControlName="name"
-                      placeholder="{{ 'contact.form.placeholder.name' | translate }}"
+                      placeholder="{{
+                        'contact.form.placeholder.name' | translate
+                      }}"
                       title="{{ 'contact.form.placeholder.name' | translate }}"
                       autocomplete="nope"
                     />
                     <div
                       *ngIf="
                         getControl('name')?.invalid &&
-                        (getControl('name')?.dirty || getControl('name')?.touched)
+                        (getControl('name')?.dirty ||
+                          getControl('name')?.touched)
                       "
                       class="validation-error"
                     >
@@ -136,7 +146,9 @@
                       id="email"
                       name="email"
                       formControlName="email"
-                      placeholder="{{ 'contact.form.placeholder.email' | translate }}"
+                      placeholder="{{
+                        'contact.form.placeholder.email' | translate
+                      }}"
                       title="{{ 'contact.form.placeholder.email' | translate }}"
                       autocomplete="nope"
                     />
@@ -167,8 +179,12 @@
                       id="contactNumber"
                       name="contactNumber"
                       formControlName="contactNumber"
-                      placeholder="{{ 'contact.form.placeholder.contact' | translate }}"
-                      title="{{ 'contact.form.placeholder.contact' | translate }}"
+                      placeholder="{{
+                        'contact.form.placeholder.contact' | translate
+                      }}"
+                      title="{{
+                        'contact.form.placeholder.contact' | translate
+                      }}"
                       autocomplete="nope"
                     />
                     <div
@@ -180,7 +196,9 @@
                       class="validation-error"
                     >
                       <div
-                        *ngIf="getControl('contactNumber')?.errors?.['required']"
+                        *ngIf="
+                          getControl('contactNumber')?.errors?.['required']
+                        "
                       >
                         {{ 'contact.form.errors.contact.required' | translate }}
                       </div>
@@ -204,8 +222,12 @@
                       id="subject"
                       name="subject"
                       formControlName="subject"
-                      placeholder="{{ 'contact.form.placeholder.subject' | translate }}"
-                      title="{{ 'contact.form.placeholder.subject' | translate }}"
+                      placeholder="{{
+                        'contact.form.placeholder.subject' | translate
+                      }}"
+                      title="{{
+                        'contact.form.placeholder.subject' | translate
+                      }}"
                       autocomplete="nope"
                     />
                     <div
@@ -220,10 +242,14 @@
                         {{ 'contact.form.errors.subject.required' | translate }}
                       </div>
                       <div *ngIf="getControl('subject')?.errors?.['minlength']">
-                        {{ 'contact.form.errors.subject.min_length' | translate }}
+                        {{
+                          'contact.form.errors.subject.min_length' | translate
+                        }}
                       </div>
                       <div *ngIf="getControl('subject')?.errors?.['maxlength']">
-                        {{ 'contact.form.errors.subject.max_length' | translate }}
+                        {{
+                          'contact.form.errors.subject.max_length' | translate
+                        }}
                       </div>
                     </div>
 
@@ -231,8 +257,12 @@
                       id="message"
                       name="message"
                       formControlName="message"
-                      placeholder="{{ 'contact.form.placeholder.message' | translate }}"
-                      title="{{ 'contact.form.placeholder.message' | translate }}"
+                      placeholder="{{
+                        'contact.form.placeholder.message' | translate
+                      }}"
+                      title="{{
+                        'contact.form.placeholder.message' | translate
+                      }}"
                       rows="5"
                       maxlength="2000"
                     ></textarea>
@@ -248,10 +278,14 @@
                         {{ 'contact.form.errors.message.required' | translate }}
                       </div>
                       <div *ngIf="getControl('message')?.errors?.['minlength']">
-                        {{ 'contact.form.errors.message.min_length' | translate }}
+                        {{
+                          'contact.form.errors.message.min_length' | translate
+                        }}
                       </div>
                       <div *ngIf="getControl('message')?.errors?.['maxlength']">
-                        {{ 'contact.form.errors.message.max_length' | translate }}
+                        {{
+                          'contact.form.errors.message.max_length' | translate
+                        }}
                       </div>
                     </div>
 
@@ -271,7 +305,9 @@
                       "
                       class="validation-error"
                     >
-                      <div *ngIf="getControl('recaptcha')?.errors?.['required']">
+                      <div
+                        *ngIf="getControl('recaptcha')?.errors?.['required']"
+                      >
                         {{ 'contact.form.errors.captcha.required' | translate }}
                       </div>
                     </div>

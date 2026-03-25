@@ -30,7 +30,7 @@ jobs:
         with:
           repository: NidhiPatadia/ramwadi
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          path: compiled-js  # Use a distinct path to avoid confusion
+          path: compiled-js # Use a distinct path to avoid confusion
 
       - name: Preserve CNAME File
         run: |
