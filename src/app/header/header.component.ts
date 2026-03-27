@@ -25,7 +25,12 @@ export class HeaderComponent implements OnInit {
       next: (response: any) => {
         if (response && response.code === 200 && response.status === 'OK') {
           console.log('Backend is up and running...');
+        } else {
+          console.error('Backend unavailable!');
         }
+      },
+      error: (_) => {
+        console.error('Backend unavailable!');
       },
     });
 
